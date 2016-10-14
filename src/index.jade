@@ -1,0 +1,107 @@
+extends template.jade
+
+block content 
+	main
+		.wrapper
+			.author-main-text-mobile
+				p Этот портал посвящен наследию и жизни нескольких поколений творческой фамилии Чуковских. И еще пара слов о чем-то...  Буквально одно предложение!
+			.author-info
+				a(href="author-page.html").author-info__item.author-info--korney
+					p.author-info__name Корней Чуковский
+					p.author-info__who Поэт, прозаик, публицист
+					.author-info__pic
+						img(src="img/author-korney.png", alt="")
+					.author-info__img
+						img(src="img/blank.gif", alt="")
+				a(href="").author-info__item.author-info--lidia
+					p.author-info__name Лидия Чуковская
+					p.author-info__who Поэт, прозаик, публицист
+					.author-info__pic
+						img(src="img/author-lidia.png", alt="")
+					.author-info__img
+						img(src="img/blank.gif", alt="")
+				a(href="").author-info__item.author-info--elena
+					p.author-info__name Елена Чуковская
+					p.author-info__who Поэт, прозаик, публицист
+					.author-info__pic
+						img(src="img/author-elena.png", alt="")
+					.author-info__img
+						img(src="img/blank.gif", alt="")
+				a(href="").author-info__item.author-info--nikolay
+					p.author-info__name Николай Чуковский
+					p.author-info__who Поэт, прозаик, публицист
+					.author-info__pic
+						img(src="img/author-nikolay.png", alt="")
+					.author-info__img
+						img(src="img/blank.gif", alt="")
+			.author-main-text
+				p Этот портал посвящен наследию и жизни нескольких поколений творческой  фамилии Чуковских. И еще пара  слов о чем-то...
+			section.content
+				h3 Популярные материалы
+				.material-list
+					.material.material--big.material--korney
+						a(href="" style="background-image: url(img/popmat.jpg)").material-bg
+							.material-type
+								.rubric.rubric--korney
+								.material-type__item.material-type__item--korney Статьи
+						.material__header
+							.material__info
+								.material__date
+									span 7 января 2012
+								.material__name
+									h2 Критические исследования творчества Корнея Чуковского
+							.material__tags
+								a(href="#") Корней Чуковский
+								a(href="#") Критика
+								a(href="#") 1965 год
+					+material('#', 'material--korney', 'last_1', 'Статьи', '7 января 2012', 'Каждый шаг своего пространства я отвоевывал')
+					+material('#', 'material--elena', 'last_2', 'Статьи', '7 января 2012', 'Программа "Непрошедшее время" о книге "Переписка. 1906-1929...')
+					+material('#', 'material--lidia', 'last_3', 'Интервью', '7 января 2012', 'Семейное дело')
+					+material('#', 'material--elena', 'last_4', 'Библиография', '7 января 2012', 'О книге "Переписка. 1906-1929. Илья Репин - Корней Чуковский"')
+				ul.pagination
+						li.prev
+							a(href="")
+						li.active
+							a(href="") 1
+						li
+							a(href="") 2
+						li
+							a(href="") 3
+						li.next
+							a(href="")
+				a(href="").more-mobile Ещё
+			section.content
+				h3 Популярные фото-материалы
+				.photomaterial-slider
+					.photomaterial-list
+						.photomaterial.photomaterial--elena
+							.rubric.rubric--elena
+							a(href="#").photomaterial__img
+								img(src="img/photo-1.jpg", alt="")
+								p Церемония вручения Е.Ц. Чуковской литературной...
+						.photomaterial.photomaterial--korney
+							.rubric.rubric--korney
+							a(href="").photomaterial__img
+								img(src="img/photo-2.jpg", alt="")
+								p Церемония вручения Е.Ц. Чуковской литературной премии в 1920 году
+						.photomaterial.photomaterial--lidia
+							.rubric.rubric--lidia
+							a(href="").photomaterial__img
+								img(src="img/photo-3.jpg", alt="")
+								p Церемония вручения Е.Ц. Чуковской литературной...
+						.photomaterial.photomaterial--elena
+							.rubric.rubric--elena
+							a(href="").photomaterial__img
+								img(src="img/photo-1.jpg", alt="")
+								p Церемония вручения Е.Ц. Чуковской литературной...
+						.photomaterial.photomaterial--nikolay
+							.rubric.rubric--nikolay
+							a(href="").photomaterial__img
+								img(src="img/photo-2.jpg", alt="")
+								p Церемония вручения Е.Ц. Чуковской литературной...
+						.photomaterial.photomaterial--lidia
+							.rubric.rubric--lidia
+							a(href="").photomaterial__img
+								img(src="img/photo-3.jpg", alt="")
+								p Церемония вручения Е.Ц. Чуковской литературной...
+					.slick-arrows

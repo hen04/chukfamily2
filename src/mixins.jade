@@ -1,0 +1,50 @@
+mixin styles(...styles)
+	-each style in styles
+		link(rel="stylesheet", href=style)
+
+mixin scripts(...scripts)
+	-each script in scripts
+		script(src=script)
+
+mixin material (href, modifier, img, lnk, date, name)
+	a(href=href class=modifier).material
+		p
+			img(src="img/" + img + ".jpg", alt="")
+		.material-type
+			.rubric
+			.material-type__item=lnk
+		.material__info
+			.material__date
+				span=date
+			.material__name
+				h2=name
+
+
+mixin authorPage (img, lnk, header, number, text, source)
+	.author-page__item
+		.img-border
+			a(href="")
+				img(src="img/" + img + ".jpg", alt="")
+		h3 
+			a(href=lnk)=header
+			span.number=number
+		.author-page__text
+			p=text
+			span.source=source
+
+
+mixin prozaItem (header, number, text, source)
+	a(href="proza-razdel.html").proza__item
+		h3
+			span.name=header
+			span.number=number
+		p=text
+		span.source=source
+
+// scene-page.html
+mixin scenePage (header, number, text)
+	.author-page__item
+		h3 
+			span.header=header
+			span.number=number
+		p=text

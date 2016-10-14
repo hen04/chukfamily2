@@ -1,0 +1,94 @@
+include mixins.jade
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title Chukfamily
+		+styles('css/normalize.css', 'css/slick.css', 'css/jquery.fancybox.css', 'css/chukfamily.css')
+	body
+		.main-content
+			header
+				.header-inner
+					.logo
+						//- Тут будет в итоге картинка стоять, должен прислать дизайнер
+						//- a(href="index.html")
+							//- img(src="img/logo.svg", alt="")
+						a(href="index.html") Chukfamily
+					nav.main-menu
+						.mobile-menu
+						.menu-block
+							.search.search--mobile
+								form(action="")
+									input(type="search" name="" placeholder="Поиск по сайту")
+							ul.first-menu
+								li
+									a(href="index.html") Главная
+								li.js-menu
+									span Chukfamily
+									ul.second-menu
+										li
+											a(href="author-page.html") Корней Чуковский
+										li
+											a(href="") Лидия Чуковская
+										li
+											a(href="") Елена Чуковская
+										li
+											a(href="") Николай Чуковский
+								li.js-menu
+									span За сценой
+									ul.second-menu
+										li
+											a(href="scene-page.html") Александр Герцен
+										li
+											a(href="scene-page.html") Борис Житков
+										li
+											a(href="scene-page.html") Фрида Вигдорова
+										li
+											a(href="scene-page.html") Уолт Уитмен
+										li
+											a(href="scene-page.html") Тамара Габбе
+								li
+									a(href="gallery.html") Галерея
+								li
+									a(href="events.html") Мероприятия
+								li.js-menu
+									span О проекте
+									ul.second-menu
+										li
+											a(href="about.html") О проекте
+										li
+											a(href="") Связь
+										li
+											a(href="") Друзья сайта
+										li
+											a(href="") Благодарности
+							.subscribe.subscribe--mobile
+								p Подписка
+								form(action="")
+									input(type="email" placeholder="Ваш e-mail")
+									button(type="submit" value="")
+					.search.search--desktop
+						form(action="")
+							input(type="search" name="" placeholder="Поиск по сайту")
+		
+			block content 
+		
+		footer 
+			.footer-inner
+				.logo
+					a(href="") Chukfamily
+					p &copy; 2016 Все права защищены
+				.footer-right
+					.soc-icons
+						a(href="").soc-icons__item.soc-icons--vk
+						a(href="").soc-icons__item.soc-icons--tw
+						a(href="").soc-icons__item.soc-icons--fb
+					.subscribe.subscribe--desktop
+						p Подписка
+						form(action="")
+							input(type="email" placeholder="Ваш e-mail")
+							button(type="submit" value="")
+	+scripts('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', 'js/slick.min.js', 'js/jquery.fancybox.pack.js', 'js/device.min.js',  'js/chukfamily.js')

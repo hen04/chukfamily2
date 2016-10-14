@@ -1,0 +1,23 @@
+{
+  "name": "chukfamily2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hen04/chukfamily2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hen04/chukfamily2/issues"
+  },
+  "homepage": "https://github.com/hen04/chukfamily2#readme",
+  "devDependencies": {
+    "gulp-sourcemap": "^1.0.1",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}
