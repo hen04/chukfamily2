@@ -2463,11 +2463,6 @@ h3 {
 		a {
 			font-size: 1.1em;
 			font-family: cambria;
-			@include transition (opacity);
-			&:hover {
-				opacity: .8;
-				@include transition (opacity);
-			}
 		}
 		.audio-lnk {
 			font-family: proximanova bold;
@@ -2539,6 +2534,11 @@ h3 {
 	.spec-block {
 		font-family: cambria italic;
 		line-height: 1.3;
+	}
+}
+.desktop .proza-contents__lnk a {
+	&:hover {
+		text-decoration: underline;
 	}
 }
 .proza-download-lnk {
