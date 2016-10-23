@@ -31,13 +31,11 @@ $min-1600: "min-width: 1600px";
 	transition: ($transition) .4s linear;
 }
 
-
-
 @font-face {
 	font-family: 'proximanova';
 	src: local("proxima nova");
 	src: url("../fonts/proximanova-reg.eot");
-	src: url("../fonts/proximanova-reg.eot?#iefix") format('embedded-opentype'), /*url("../fonts/proximanova-reg.woff") format('woff'),*/ url("../fonts/proximanova-reg.ttf") format('truetype'), url("../fonts/proximanova-reg.svg#proximanova") format('svg');
+	src: url("../fonts/proximanova-reg.eot?#iefix") format('embedded-opentype'), url("../fonts/proximanova-reg.woff") format('woff'), url("../fonts/proximanova-reg.ttf") format('truetype'), url("../fonts/proximanova-reg.svg#proximanova") format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -45,7 +43,7 @@ $min-1600: "min-width: 1600px";
   font-family: proximanova bold;
   src: local("proximanova bold");
 	src: url("../fonts/proximanova-bold.eot");
-	src: url("../fonts/proximanova-bold.eot?#iefix") format('embedded-opentype'), /*url("../fonts/proximanova-bold.woff") format('woff'),*/ url("../fonts/proximanova-bold.ttf") format('truetype'), url("../fonts/proximanova-bold.svg#proximanova bold") format('svg');
+	src: url("../fonts/proximanova-bold.eot?#iefix") format('embedded-opentype'), url("../fonts/proximanova-bold.woff") format('woff'), url("../fonts/proximanova-bold.ttf") format('truetype'), url("../fonts/proximanova-bold.svg#proximanova bold") format('svg');
 	font-weight: bold;
 	font-style: normal;
 }
@@ -53,7 +51,7 @@ $min-1600: "min-width: 1600px";
 	font-family: proximanova-extrabld;
 	src: local("proximanova-extrabld");
 	src: url("../fonts/proximanova-extrabld.eot");
-	src: url("../fonts/proximanova-extrabld.eot?#iefix") /*format('embedded-opentype'), url("../fonts/proximanova-extrabld.woff")*/ format('woff'), url("../fonts/proximanova-extrabld.ttf") format('truetype'), url("../fonts/proximanova-extrabld.svg#proximanova-extrabld") format('svg');
+	src: url("../fonts/proximanova-extrabld.eot?#iefix") format('embedded-opentype'), url("../fonts/proximanova-extrabld.woff") format('woff'), url("../fonts/proximanova-extrabld.ttf") format('truetype'), url("../fonts/proximanova-extrabld.svg#proximanova-extrabld") format('svg');
 	font-weight: 900;
 	font-style: normal;
 }
@@ -61,7 +59,7 @@ $min-1600: "min-width: 1600px";
 	font-family: 'cambria';
 	src: local("cambria");
 	src: url("../fonts/cambria.eot");
-	src: url("../fonts/cambria.eot?#iefix") format('embedded-opentype'), /*url("../fonts/cambria.woff") format('woff'), url("../fonts/cambria.ttf")*/ format('truetype'), url("../fonts/cambria.svg#cambria") format('svg');
+	src: url("../fonts/cambria.eot?#iefix") format('embedded-opentype'), url("../fonts/cambria.woff") format('woff'), url("../fonts/cambria.ttf") format('truetype'), url("../fonts/cambria.svg#cambria") format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -69,7 +67,7 @@ $min-1600: "min-width: 1600px";
 	font-family: 'cambria bold';
 	src: local("cambria bold");
 	src: url("../fonts/cambria-bold.eot");
-	src: url("../fonts/cambria-bold.eot?#iefix") format('embedded-opentype'), /*url("../fonts/cambria-bold.woff") format('woff'),*/ url("../fonts/cambria-bold.ttf") format('truetype'), url("../fonts/cambria-bold.svg#cambria bold") format('svg');
+	src: url("../fonts/cambria-bold.eot?#iefix") format('embedded-opentype'), url("../fonts/cambria-bold.woff") format('woff'), url("../fonts/cambria-bold.ttf") format('truetype'), url("../fonts/cambria-bold.svg#cambria bold") format('svg');
 	font-weight: bold;
 	font-style: normal;
 }
@@ -77,7 +75,7 @@ $min-1600: "min-width: 1600px";
 	font-family: 'cambria italic';
 	src: local("cambria italic");
 	src: url("../fonts/cambria-italic.eot");
-	src: url("../fonts/cambria-italic.eot?#iefix") format('embedded-opentype'), /*url("../fonts/cambria-italic.woff") format('woff'),*/ url("../fonts/cambria-italic.ttf") format('truetype'), url("../fonts/cambria-italic.svg#cambria italic") format('svg');
+	src: url("../fonts/cambria-italic.eot?#iefix") format('embedded-opentype'), url("../fonts/cambria-italic.woff") format('woff'), url("../fonts/cambria-italic.ttf") format('truetype'), url("../fonts/cambria-italic.svg#cambria italic") format('svg');
 	font-weight: normal;
 	font-style: italic;
 }
@@ -85,7 +83,7 @@ $min-1600: "min-width: 1600px";
 	font-family: $LG;
 	src: local($LG);
 	src: url("../fonts/lucida-grande.eot");
-	src: url("../fonts/lucida-grande.eot?#iefix") format('embedded-opentype'), /*url("../fonts/lucida-grande.woff") format('woff'),*/ url("../fonts/lucida-grande.ttf") format('truetype'), url("../fonts/lucida-grande.svg#lucida-grande-bold") format('svg');
+	src: url("../fonts/lucida-grande.eot?#iefix") format('embedded-opentype'), url("../fonts/lucida-grande.woff") format('woff'), url("../fonts/lucida-grande.ttf") format('truetype'), url("../fonts/lucida-grande.svg#lucida-grande-bold") format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -94,11 +92,10 @@ $min-1600: "min-width: 1600px";
 	font-family: $LGB;
 	src: local($LGB);
 	src: url("../fonts/lucida-grande-bold.eot");
-	src: url("../fonts/lucida-grande-bold.eot?#iefix") /*format('embedded-opentype'), url("../fonts/lucida-grande-bold.woff")*/ format('woff'), url("../fonts/lucida-grande-bold.ttf") format('truetype'), url("../fonts/lucida-grande-bold.svg#lucida-grande-bold") format('svg');
+	src: url("../fonts/lucida-grande-bold.eot?#iefix") format('embedded-opentype'), url("../fonts/lucida-grande-bold.woff") format('woff'), url("../fonts/lucida-grande-bold.ttf") format('truetype'), url("../fonts/lucida-grande-bold.svg#lucida-grande-bold") format('svg');
 	font-weight: bold;
 	font-style: normal;
 }
-
 
 body {
 	font-family: 'proximanova, arial, serif';
@@ -116,9 +113,9 @@ body {
 	}
 }
 .main-content {
-	min-height: -webkit-calc(100vh - 100px);
-	min-height: -moz-calc(100vh - 100px);
-	min-height: calc(100vh - 100px);
+	min-height: -webkit-calc(100vh - 127px);
+	min-height: -moz-calc(100vh - 127px);
+	min-height: calc(100vh - 127px);
 }
 .wrapper {
 	margin: 0 auto;
@@ -564,13 +561,8 @@ footer {
 		overflow: hidden;
 	}
 	@media ($min-860) {
-		padding-top: 20px;
-		-webkit-order: 2;
-		order: 2;
-		float: right;
 		-webkit-order: 3;
 		order: 3;
-		padding-top: 7px;
 	}
 	&__item {
 		width: 33px;
@@ -616,7 +608,8 @@ main {
 		padding: 1em -0px;
 	}
 	@media ($min-860) {
-		padding: 1em 20px;
+		// padding: 1em 20px;
+		padding: 1em 0;
 	}
 }
 .author-info {
@@ -989,7 +982,7 @@ h3 {
 		position: relative;
 		h2 {
 			text-align: left;
-			margin-bottom: 0;
+			margin: 0 3.1em 0 0;
 			font-weight: 700;
 			color: #000;
 			font-size: 1em;
@@ -1410,7 +1403,7 @@ h3 {
 }
 .pagination {
 	@media ($max-599) {
-		display: none;
+		display: none !important;
 	}
 	@media ($min-600) {
 		display: -webkit-flex;
@@ -1753,24 +1746,33 @@ h3 {
 	border-bottom: 2px solid #000;
 	position: relative;
 	cursor: pointer;
-	font-size: 1rem;
+	font-size: .8rem;
 	margin-right: 35px;
 	letter-spacing: 1px;
 	padding-bottom: 1px;
 	text-decoration: none;
 	color: #000;
+	@media ($min-600) {
+		font-size: 1rem;
+	}
 	&:after {
 		content: '';
 		position: absolute;
 		background: url(../img/next.svg) 0 0 no-repeat;
-		background-size: 12px 29px;
+		background-size: 9px 28px;
 		-ms-transform: rotate(180deg);
 		-webkit-transform: rotate(180deg);
 		transform: rotate(180deg);
-		width: 12px;
-		height: 29px;
-		top: -7px;
-		margin-left: .7em;
+		width: 9px;
+		height: 28px;
+		top: 0;
+		bottom: 0;
+		right: -30px;
+		margin: auto 0;
+		@media ($min-600) {
+			background-size: 12px 28px;
+			width: 12px;
+		}
 	}
 }
 .desktop {
@@ -1780,10 +1782,13 @@ h3 {
 			border-bottom-color: $gray;
 			&:after {
 				background: url(../img/next-hover.svg) 0 0 no-repeat;
-				background-size: 12px 29px;
+				background-size: 9px 28px;
 				-ms-transform: rotate(0deg);
 				-webkit-transform: rotate(0deg);
 				transform: rotate(0deg);
+				@media ($min-600) {
+					background-size: 12px 28px;
+				}
 			}
 		}
 	}
@@ -1867,7 +1872,10 @@ h3 {
 		-o-flex-flow: row wrap;
 		flex-flow: row wrap;
 		@media ($max-859) {
-			margin-bottom: 15px;
+			margin-bottom: 3em;
+		}
+		@media ($min-860) {
+			margin-bottom: 1.5em;
 		}
 	}
 	&__photo-item {
@@ -1925,12 +1933,13 @@ h3 {
 		h3 {
 			text-align: left;
 			overflow: hidden;
+			font-family: proximanova bold;
 			margin-bottom: .8em;
 			@media ($max-599) {
 				font-size: 1.2em;
 			}
 			a {
-				font-family: $LGB;
+				font-family: proximanova bold;
 				line-height: 1;
 				color: #000;
 				text-decoration: none;
@@ -1947,7 +1956,6 @@ h3 {
 				}
 			}
 			.header {
-				font-family: $LGB;
 				line-height: 1;
 				color: #000;
 				text-decoration: none;
@@ -1958,8 +1966,8 @@ h3 {
 				}
 				@media ($min-600) {
 					letter-spacing: 3px;
-					font-size: 23px;
-					font-weight: 700;
+					font-size: .9em;
+					font-family: proximanova bold;
 				}
 			}
 		}
@@ -1982,6 +1990,44 @@ h3 {
 				color: $gray;
 			}
 		}
+		&--scene {
+			margin-bottom: 3em;
+			h3 {
+				.number {
+					line-height: 1;
+				}
+			}
+			.more {
+				&:after {
+					-ms-transform: rotate(-90deg);
+					-webkit-transform: rotate(-90deg);
+					transform: rotate(-90deg);
+				}
+				&:hover {
+					&:after {
+						-ms-transform: rotate(90deg);
+						-webkit-transform: rotate(90deg);
+						transform: rotate(90deg);
+					}
+				}
+			}
+			&.open {
+				.more {
+					color: $gray;
+					border-bottom: 0;
+					&:after {
+						background: url(../img/next-hover.svg) 0 0 no-repeat;
+						background-size: 9px 19px;
+						-ms-transform: rotate(-90deg);
+						-webkit-transform: rotate(-90deg);
+						transform: rotate(-90deg);
+						@media ($min-600) {
+							background-size: 12px 19px;
+						}
+					}
+				}
+			}
+		}
 	}
 	&__text {
 		@media ($max-599) {
@@ -1990,31 +2036,24 @@ h3 {
 	}
 	&__articles {
 		a {
-			font-size: 20px;
+			font-size: 1.1em;
 			font-family: Cambria;
 			display: block;
-			margin-bottom: 10px;
-		}
-	}
-	&--scene {
-		margin-bottom: 1.5em;
-		h3 {
-			.header {
-				@media ($min-600) {
-					font-size: 25px;
-				}
-			}
+			margin-bottom: .8em;
 		}
 	}
 	&__info {
 		overflow: hidden;
 		p {
-			margin-bottom: .5em;
+			margin-bottom: 1em;
 		}
 		a {
 			font-size: 1em;
 			font-family: Cambria;
 			text-decoration: underline;
+			@media ($min-600) {
+				font-size: 1.25em;
+			}
 		}
 	}
 	.more {
@@ -2708,5 +2747,105 @@ h3 {
 	margin: 0 -20px 20px;
 	.ya-share2__list_direction_horizontal > .ya-share2__item {
 		margin-right: 15px;
+	}
+}
+
+
+// page scene item
+.author-page-text {
+	margin-top: 1.5em;
+	.breadcrumbs {
+		a {
+			font-size: 1.7em;
+			text-decoration: underline;
+			font-family: Proximanova bold;
+		}
+	}
+}
+
+// gallery.html
+.gallery {
+	padding: 1em 0 3em;
+	h3 {
+		font-size: 1.2em;
+	}
+}
+.gallery-menu {
+	padding: 0;
+	margin: 1em 0 2em;
+	width: 100%;
+	text-align: center;
+	@media ($min-600) {
+		margin: 2.5em 0 3.2em;
+	}
+	li {
+		list-style: none;
+		margin: 0 15px 1.5em;
+		text-transform: uppercase;
+		font-family: Proximanova bold;
+		font-size: .8em;
+		cursor: pointer;
+		color: $gray;
+		@media ($min-600) {
+			display: inline-block;
+			margin-bottom: 0;
+			font-size: .7em;
+		}
+		@media ($min-860) {
+			font-size: .6em;
+		}
+		&.active {
+			span {
+				color: #000;
+				border-bottom: 2px solid #000;
+			}
+		}
+	}
+}
+
+.gallery-albom-list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	-o-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	margin-bottom: 1.3em;
+}
+.gallery-albom-item {
+	display: block;
+	width: 100%;
+	@media ($min-860) {
+		width: 49%;
+	}
+	img {
+		max-width: 100%;
+		vertical-align: top;
+	}
+	h4 {
+		font-size: 1em;
+		margin: .8em 0 1.5em 0;
+		font-family: cambria bold;
+		line-height: 1.2;
+		@media ($min-860) {
+			font-size: 1.4em;
+			margin: .8em .8em 1.3em .8em;
+		}
+		@media ($min-1024) {
+			margin-right: 2em;
+		}
+		@media ($min-1280) {
+			margin-right: 5em;
+		}
+	}
+	.rubric {
+		position: absolute;
+		margin: .9em 0 0 1.2em;
 	}
 }

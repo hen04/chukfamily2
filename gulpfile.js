@@ -26,12 +26,13 @@ gulp.task('style', function () {
 });
 
 // js
-gulp.task('js', function(){
-	gulp.src('build/js/*.js')
-		.on('error', console.log)
-		.pipe(gulp.dest('build/js/'))
-		.on('end', browserSync.reload);
-});
+// gulp.task('js', function(){
+// 	gulp.src('build/js/*.js')
+// 		.on('error', console.log)
+// 		.pipe(gulp.dest('build/js/'))
+// 		.on('end', browserSync.reload);
+// });
+
 // autoprefix
 gulp.task('autoprefix', function () {
 	return gulp.src('css/chukfamily.css')
@@ -54,5 +55,5 @@ gulp.task('webserver', function () {
 gulp.task('watch', ['webserver'],function(){
 	gulp.watch('src/scss/*.scss',['style']);
 	gulp.watch('src/*.jade',['jade']);
-	gulp.watch('build/js/*.js',['js']);
+	// gulp.watch('build/js/*.js',['js']);
 });

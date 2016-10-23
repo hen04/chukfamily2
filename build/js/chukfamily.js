@@ -54,24 +54,36 @@ $(function(){
 	$(window).on('resize',windowResize);
 
 
-	var sceneLnk = 4, // - количество отображаемых блоков
+// scene-page show all material
+	var sceneLnk = 4, // - количество отображаемых ссылок в блоке
 			hidenews = "Скрыть весь материал",
-			shownews = "Показать весь материал";
+			shownews = "Показать весь материал",
+			$itemBlock = $('.author-page__item .author-page__info');
 
-	$(".js-open").html( shownews );
-	$(".author-page__lnk:not(:lt("+sceneLnk+"))").hide();
-
-	$(".js-open").click(function (e){
-		e.preventDefault();
-		if( $(".author-page__lnk:eq("+sceneLnk+")").is(":hidden") )
-		{
-			$(".author-page__lnk:hidden").show();
-			$(".js-open").html( hidenews );
+	// hide link if count of material less than 4
+	$('.author-page__info').each(function(){
+		var lnkCountEl = $(this).children('p').length;
+		if (lnkCountEl < sceneLnk) {
+			$(this).parent().find('.more').hide();
 		}
-		else
-		{
-			$(".author-page__lnk:not(:lt("+sceneLnk+"))").hide();
-			$(".js-open").html( shownews );
+	});
+
+	// hide all links, if they are more than 4
+	$itemBlock.each(function(){
+		$(this).children("p:not(:lt("+sceneLnk+"))").hide();
+	});
+
+	// show all links if click all material
+	$(".js-open").click(function (){
+		if( $(this).parent().hasClass('open') ) { // если есть класс open
+			$(this).parent().find(".author-page__info p:not(:lt("+sceneLnk+"))").hide(); // все открытые ссылки закрываем
+			$(this).html(shownews); // меняем обратно надпись в исходное положение
+			$(this).parent().removeClass('open'); // ликвидируем класс open
+		}
+		else {
+			$(this).parent().find(".author-page__info p:not(:lt("+sceneLnk+"))").show(); // находим все ссылки у этого блока и открываем
+			$(this).html(hidenews); // подменяем ссылку по которой кликнули
+			$(this).parent().addClass('open'); // родителю присваиваем класс open
 		}
 	});
 
@@ -156,5 +168,38 @@ $(function(){
 		}
 
 	}
+
+	// gallery.html
+	$.fn.tabs = function() {
+		var menuItem = $(this).data('item'),
+				$this = $(this);
+
+		// add active class on click menu
+		$('.gallery-menu li').removeClass('active');
+		$this.addClass('active');
+
+
+		// show all or clicked item
+		if ( menuItem == "all") {
+			$('.gallery-albom-item').show().addClass('js-visible');
+		} else {
+			$('.gallery-albom-item').hide().removeClass('js-visible');
+			$this.parent().next().find('.gallery-albom-item[data-result="'+ menuItem +'"]').show().addClass('js-visible');
+		}
+	}
+	$('.gallery-menu li').on('click', function(){
+		var $this = $(this);
+		$this.tabs();
+
+		// hide/show pagination if galleryCount < 5
+		var galleryCount = $('.js-visible').length;
+		if (galleryCount < 6) {
+			$('.pagination').css('display', 'none');
+		} else {
+			$('.pagination').css('display', 'flex');
+		}
+	});
+
+
 
 });

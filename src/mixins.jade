@@ -48,3 +48,10 @@ mixin scenePage (header, number, text)
 			span.header=header
 			span.number=number
 		p=text
+
+// gallery.html
+mixin galleryAlbom (href, data, modifier, img, name)
+	a(href=href data-result=data).gallery-albom-item
+		.rubric(class=modifier)
+		img(src=img, alt="")
+		h4=name
