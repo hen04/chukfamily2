@@ -605,11 +605,10 @@ main {
 	box-sizing: border-box;
 	overflow: hidden;
 	@media ($max-859) {
-		padding: 1em -0px;
+		padding: 2em 0 0;
 	}
 	@media ($min-860) {
-		// padding: 1em 20px;
-		padding: 1em 0;
+		padding: 2em 0 0;
 	}
 }
 .author-info {
@@ -1699,7 +1698,6 @@ h3 {
 .author-page-intro {
 	overflow: hidden;
 	margin-bottom: 2.7em;
-	padding-top: 10px;
 	img {
 		max-width: 100%;
 	}
@@ -2396,12 +2394,12 @@ h3 {
 			width: 100px;
 		}
 	}
-	.razdel {
-		font-family: $LGB;
-		letter-spacing: 1px;
+	span,
+	a {
+		font-family: Proximanova bold;
 		font-size: 1.5em;
 	}
-	a.razdel {
+	a {
 		border-bottom: 2px solid #000;
 	}
 }
@@ -2750,22 +2748,9 @@ h3 {
 	}
 }
 
-
-// page scene item
-.author-page-text {
-	margin-top: 1.5em;
-	.breadcrumbs {
-		a {
-			font-size: 1.7em;
-			text-decoration: underline;
-			font-family: Proximanova bold;
-		}
-	}
-}
-
 // gallery.html
 .gallery {
-	padding: 1em 0 3em;
+	padding-bottom: 3em;
 	h3 {
 		font-size: 1.2em;
 	}
@@ -2821,6 +2806,7 @@ h3 {
 .gallery-albom-item {
 	display: block;
 	width: 100%;
+	position: relative;
 	@media ($min-860) {
 		width: 49%;
 	}
@@ -2846,6 +2832,7 @@ h3 {
 	}
 	.rubric {
 		position: absolute;
-		margin: .9em 0 0 1.2em;
+		top: 10px;
+		left: 10px;
 	}
 }
