@@ -523,16 +523,11 @@ footer {
 main {
   background-color: #f0f0e6;
   box-sizing: border-box;
-  overflow: hidden; }
-  @media (max-width: 859px) {
-    main {
-      padding: 1em -0px; } }
-  @media (min-width: 860px) {
-    main {
-      padding: 1em 0; } }
+  overflow: hidden;
+  padding: 1em 0 1em; }
 
 .author-info {
-  padding-top: 15px;
+  padding-top: 1em;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -1845,7 +1840,7 @@ h3 .number {
   -moz-transition: width 0.4s linear;
   -webkit-transition: width 0.4s linear;
   transition: width 0.4s linear;
-  margin: 1em auto 2em; }
+  margin: 0 auto 2em; }
   @media (max-width: 599px) {
     .proza {
       width: 100%; } }
@@ -1862,7 +1857,6 @@ h3 .number {
     text-align: center;
     margin-bottom: 1.5em; }
   .proza p {
-    font-family: cambria;
     margin-bottom: 15px;
     line-height: 1.3; }
   .proza__item {
@@ -1989,7 +1983,8 @@ h3 .number {
   -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 1em; }
   @media (max-width: 859px) {
     .breadcrumbs {
       margin-bottom: 1.5em; } }
@@ -2149,7 +2144,6 @@ h3 .number {
     color: #9b9b9b;
     margin-right: 15px; }
   .proza-download-lnk a {
-    transition: opacity .4s linear;
     color: #9b9b9b;
     border-bottom: 2px solid #9b9b9b;
     display: inline-block;
@@ -2159,16 +2153,16 @@ h3 .number {
     font-size: .7em; }
 
 .desktop .proza-download-lnk a {
-  -o-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear; }
+  -o-transition: color 0.4s linear;
+  -moz-transition: color 0.4s linear;
+  -webkit-transition: color 0.4s linear;
+  transition: color 0.4s linear; }
   .desktop .proza-download-lnk a:hover {
     border-bottom-color: transparent;
-    -o-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -webkit-transition: all 0.4s linear;
-    transition: all 0.4s linear; }
+    -o-transition: color 0.4s linear;
+    -moz-transition: color 0.4s linear;
+    -webkit-transition: color 0.4s linear;
+    transition: color 0.4s linear; }
 
 .mobile .audio-lnk {
   display: none; }
@@ -2182,16 +2176,16 @@ h3 .number {
   margin-bottom: 3px;
   font-size: .7em;
   line-height: 1;
-  -o-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear; }
+  -o-transition: color 0.4s linear;
+  -moz-transition: color 0.4s linear;
+  -webkit-transition: color 0.4s linear;
+  transition: color 0.4s linear; }
   .desktop .audio-lnk:hover {
     border-bottom-color: transparent;
-    -o-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -webkit-transition: all 0.4s linear;
-    transition: all 0.4s linear; }
+    -o-transition: color 0.4s linear;
+    -moz-transition: color 0.4s linear;
+    -webkit-transition: color 0.4s linear;
+    transition: color 0.4s linear; }
 
 .lnk-add {
   display: block;
@@ -2301,7 +2295,7 @@ h3 .number {
     margin-right: 15px; }
 
 .author-page-text {
-  margin-top: 1.5em; }
+  margin-top: 1em; }
   .author-page-text .breadcrumbs a {
     font-size: 1.7em;
     text-decoration: underline;
@@ -2382,5 +2376,3 @@ h3 .number {
   .gallery-albom-item .rubric {
     position: absolute;
     margin: .9em 0 0 1.2em; }
-
-/*# sourceMappingURL=maps/chukfamily.css.map */
