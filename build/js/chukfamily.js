@@ -3,16 +3,6 @@ $(function(){
 	var secondMenu = $('.second-menu');
 
 	// меню выпадает по клику на иконку на маленьких разрешениях
-	function windowmenuSize(){
-		if ($(window).width() <= '860'){
-			$('.mobile-menu').on('click', function(){
-				var $this = $(this);
-				$this.mobileMenu();
-			});
-		}
-	}
-	$(window).on('load',windowmenuSize);
-
 	$.fn.mobileMenu = function() {
 		if( $(this).hasClass("active") ) {
 			menu.stop().slideUp();
@@ -22,18 +12,13 @@ $(function(){
 			$(this).addClass('active');
 		}
 	}
+	$('.mobile-menu').on('click', function(){
+		var $this = $(this);
+		$this.mobileMenu();
+	});
 
 
 	// secondMenu - second menu only mobile
-	function windowSize(){
-		if ($(window).width() <= '860'){
-			$('.js-menu').on('click', function(){
-				var $this = $(this);
-				$this.secondMenu();
-			});
-		}
-	}
-	$(window).on('load',windowSize);
 	$.fn.secondMenu = function() {
 		if( $(this).hasClass("active") ) {
 			secondMenu.stop().slideUp();
@@ -45,13 +30,17 @@ $(function(){
 			$(this).addClass('active');
 		}
 	}
+	$('.js-menu').on('click', function(){
+		var $this = $(this);
+		$this.secondMenu();
+	});
 
 // secondMenu close resize
-	function windowResize(){
-		secondMenu.stop().slideUp();
-		$('.js-menu').removeClass('active');
-	}
-	$(window).on('resize',windowResize);
+	// function windowResize(){
+	// 	secondMenu.stop().slideUp();
+	// 	$('.js-menu').removeClass('active');
+	// }
+	// $(window).on('resize',windowResize);
 
 
 // scene-page show all material

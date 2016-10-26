@@ -1,65 +1,57 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'proximanova';
-  src: local("proxima nova");
-  src: url("../fonts/proximanova-reg.eot");
-  src: url("../fonts/proximanova-reg.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-reg.woff") format("woff"), url("../fonts/proximanova-reg.ttf") format("truetype"), url("../fonts/proximanova-reg.svg#proximanova") format("svg");
+  src: url("../fonts/proximanova.eot");
+  src: local("☺"), url("../fonts/proximanova.woff") format("woff"), url("../fonts/proximanova.ttf") format("truetype"), url("../fonts/proximanova.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: proximanova bold;
-  src: local("proximanova bold");
+  font-family: 'proximanova bold';
   src: url("../fonts/proximanova-bold.eot");
-  src: url("../fonts/proximanova-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-bold.woff") format("woff"), url("../fonts/proximanova-bold.ttf") format("truetype"), url("../fonts/proximanova-bold.svg#proximanova bold") format("svg");
+  src: local("☺"), url("../fonts/proximanova-bold.woff") format("woff"), url("../fonts/proximanova-bold.ttf") format("truetype"), url("../fonts/proximanova-bold.svg") format("svg");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
-  font-family: proximanova-extrabld;
-  src: local("proximanova-extrabld");
+  font-family: 'proximanova-extrabld';
   src: url("../fonts/proximanova-extrabld.eot");
-  src: url("../fonts/proximanova-extrabld.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-extrabld.woff") format("woff"), url("../fonts/proximanova-extrabld.ttf") format("truetype"), url("../fonts/proximanova-extrabld.svg#proximanova-extrabld") format("svg");
+  src: local("☺"), url("../fonts/proximanova-extrabld.woff") format("woff"), url("../fonts/proximanova-extrabld.ttf") format("truetype"), url("../fonts/proximanova-extrabld.svg") format("svg");
   font-weight: 900;
   font-style: normal; }
 
 @font-face {
   font-family: 'cambria';
-  src: local("cambria");
   src: url("../fonts/cambria.eot");
-  src: url("../fonts/cambria.eot?#iefix") format("embedded-opentype"), url("../fonts/cambria.woff") format("woff"), url("../fonts/cambria.ttf") format("truetype"), url("../fonts/cambria.svg#cambria") format("svg");
+  src: local("☺"), url("../fonts/cambria.woff") format("woff"), url("../fonts/cambria.ttf") format("truetype"), url("../fonts/cambria.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'cambria bold';
-  src: local("cambria bold");
   src: url("../fonts/cambria-bold.eot");
-  src: url("../fonts/cambria-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/cambria-bold.woff") format("woff"), url("../fonts/cambria-bold.ttf") format("truetype"), url("../fonts/cambria-bold.svg#cambria bold") format("svg");
+  src: local("☺"), url("../fonts/cambria-bold.woff") format("woff"), url("../fonts/cambria-bold.ttf") format("truetype"), url("../fonts/cambria-bold.svg") format("svg");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'cambria italic';
-  src: local("cambria italic");
   src: url("../fonts/cambria-italic.eot");
-  src: url("../fonts/cambria-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/cambria-italic.woff") format("woff"), url("../fonts/cambria-italic.ttf") format("truetype"), url("../fonts/cambria-italic.svg#cambria italic") format("svg");
+  src: local("☺"), url("../fonts/cambria-italic.woff") format("woff"), url("../fonts/cambria-italic.ttf") format("truetype"), url("../fonts/cambria-italic.svg") format("svg");
   font-weight: normal;
   font-style: italic; }
 
 @font-face {
   font-family: "lucida-grande";
-  src: local("lucida-grande");
   src: url("../fonts/lucida-grande.eot");
-  src: url("../fonts/lucida-grande.eot?#iefix") format("embedded-opentype"), url("../fonts/lucida-grande.woff") format("woff"), url("../fonts/lucida-grande.ttf") format("truetype"), url("../fonts/lucida-grande.svg#lucida-grande-bold") format("svg");
+  src: local("☺"), url("../fonts/lucida-grande.woff") format("woff"), url("../fonts/lucida-grande.ttf") format("truetype"), url("../fonts/lucida-grande.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "lucida-grande-bold";
-  src: local("lucida-grande-bold");
   src: url("../fonts/lucida-grande-bold.eot");
-  src: url("../fonts/lucida-grande-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lucida-grande-bold.woff") format("woff"), url("../fonts/lucida-grande-bold.ttf") format("truetype"), url("../fonts/lucida-grande-bold.svg#lucida-grande-bold") format("svg");
+  src: local("☺"), url("../fonts/lucida-grande-bold.woff") format("woff"), url("../fonts/lucida-grande-bold.ttf") format("truetype"), url("../fonts/lucida-grande-bold.svg") format("svg");
   font-weight: bold;
   font-style: normal; }
 
@@ -70,7 +62,11 @@ body {
   background-color: #f0f0e6;
   font-size: 18px;
   line-height: 1;
-  min-width: 320px; }
+  min-width: 320px;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; }
   @media (min-width: 860px) {
     body {
       font-size: 20px; } }
@@ -101,6 +97,12 @@ h3 {
 a {
   text-decoration: none;
   color: #000; }
+
+input, button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0; }
 
 .desktop a:hover {
   color: #000;
@@ -388,13 +390,8 @@ footer {
     outline: none;
     color: #000;
     float: left;
-    font-family: proximanova bold; }
-    @media (min-width: 480px) {
-      .subscribe input[type=email] {
-        width: -webkit-calc(100% - 30px);
-        width: -moz-calc(100% - 30px);
-        width: -o-calc(100% - 30px);
-        width: calc(100% - 30px); } }
+    font-family: proximanova bold;
+    padding: 0; }
   .subscribe button[type=submit] {
     background-color: transparent;
     border: 0;
@@ -470,6 +467,9 @@ footer {
 @media (min-width: 860px) {
   .soc-icons {
     -webkit-order: 3;
+    -moz-order: 3;
+    -ms-order: 3;
+    -o-order: 3;
     order: 3; } }
 
 .soc-icons__item {
@@ -582,12 +582,14 @@ main {
     -moz-transition: all 0.4s linear;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
-    color: #000; }
-    @media (min-width: 480px) {
-      .author-info__name {
-        font-size: 1em; } }
+    color: #000;
+    font-size: 1.2em; }
     @media (max-width: 859px) {
       .author-info__name {
+        -webkit-order: 2;
+        -moz-order: 2;
+        -ms-order: 2;
+        -o-order: 2;
         order: 2; } }
     @media (min-width: 860px) {
       .author-info__name {
@@ -597,7 +599,7 @@ main {
         font-size: 1.1em; } }
   .author-info__who {
     font-family: cambria italic;
-    font-size: .8em;
+    font-size: .9em;
     -o-transition: all 0.4s linear;
     -moz-transition: all 0.4s linear;
     -webkit-transition: all 0.4s linear;
@@ -853,27 +855,23 @@ h3 {
     position: relative; }
     .material__name h2 {
       text-align: left;
-      margin: 0 3.1em 0 0;
       font-weight: 700;
       color: #000;
-      font-size: 1em;
+      font-size: 1.2em;
       line-height: 1.25; }
       @media (min-width: 480px) {
         .material__name h2 {
-          font-size: .8em;
           line-height: 1.3;
           -o-transition: color 0.4s linear;
           -moz-transition: color 0.4s linear;
           -webkit-transition: color 0.4s linear;
           transition: color 0.4s linear; } }
-      @media (min-width: 600px) {
-        .material__name h2 {
-          font-size: .7em; } }
       @media (min-width: 768px) {
         .material__name h2 {
           font-size: .9em; } }
       @media (min-width: 1024px) {
         .material__name h2 {
+          margin: 0 3.1em 0 0;
           font-size: 1.4em; } }
   .material--korney .rubric {
     background-color: #c7a033; }
@@ -1618,7 +1616,7 @@ h3 {
   @media (max-width: 859px) {
     .author-page__category {
       width: 100%;
-      -webkit-order: 2;
+      -webkit-order: 1;
       -moz-order: 1;
       -ms-order: 1;
       -o-order: 1;
@@ -1653,10 +1651,17 @@ h3 {
       text-align: left;
       overflow: hidden;
       font-family: proximanova bold;
-      margin-bottom: .8em; }
+      margin-bottom: .8em;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex; }
       @media (max-width: 599px) {
         .author-page__item h3 {
           font-size: 1.2em; } }
+      .author-page__item h3 .number {
+        margin-top: 2px; }
       .author-page__item h3 a {
         font-family: proximanova bold;
         line-height: 1;
@@ -1703,7 +1708,8 @@ h3 {
     .author-page__item--scene {
       margin-bottom: 3em; }
       .author-page__item--scene h3 .number {
-        line-height: 1; }
+        line-height: 1;
+        margin-top: 0; }
       .author-page__item--scene .more:after {
         -ms-transform: rotate(-90deg);
         -webkit-transform: rotate(-90deg);
@@ -1771,7 +1777,7 @@ h3 {
       border-bottom: 3px solid transparent; } }
 
 h3 .number {
-  position: absolute;
+  position: relative;
   font-family: proximanova;
   font-size: .7em; }
   @media (max-width: 599px) {
@@ -1819,6 +1825,7 @@ h3 .number {
   -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center;
   box-sizing: border-box;
   margin-bottom: 5px; }
@@ -1871,11 +1878,21 @@ h3 .number {
       position: relative;
       font-family: cambria bold;
       font-size: 1.3em;
-      letter-spacing: 0; }
+      letter-spacing: 0;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -ms-align-items: center;
+      align-items: center; }
       @media (max-width: 599px) {
         .proza__item h3 {
           margin-left: -18px;
-          font-size: 1.2em; } }
+          font-size: 1.1em; } }
       @media (min-width: 600px) {
         .proza__item h3 {
           text-align: left;
@@ -1892,8 +1909,7 @@ h3 .number {
             font-size: 22px;
             float: left; } }
       .proza__item h3 .number {
-        top: 50%;
-        transform: translateY(-40%); }
+        margin-top: 4px; }
     @media (max-width: 599px) {
       .proza__item p {
         display: none; } }
@@ -1983,6 +1999,7 @@ h3 .number {
   -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center;
   margin-top: 1em; }
   @media (max-width: 859px) {
@@ -2058,15 +2075,10 @@ h3 .number {
     -moz-flex-flow: row nowrap;
     -ms-flex-flow: row nowrap;
     -o-flex-flow: row nowrap;
-    flex-flow: row nowrap; }
-    @media (max-width: 599px) {
-      .proza-contents__lnk {
-        -ms-align-items: center;
-        align-items: center; } }
-    @media (min-width: 600px) {
-      .proza-contents__lnk {
-        -ms-align-items: center;
-        align-items: center; } }
+    flex-flow: row nowrap;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center; }
     .proza-contents__lnk p {
       line-height: 1;
       margin-bottom: 0; }
@@ -2221,6 +2233,7 @@ h3 .number {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+  -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center;
   font-size: .8rem; }
