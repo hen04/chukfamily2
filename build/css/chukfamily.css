@@ -526,10 +526,10 @@ main {
   overflow: hidden; }
   @media (max-width: 859px) {
     main {
-      padding: 2em 0 0; } }
+      padding: 1em -0px; } }
   @media (min-width: 860px) {
     main {
-      padding: 2em 0 0; } }
+      padding: 1em 0; } }
 
 .author-info {
   padding-top: 15px;
@@ -1448,7 +1448,8 @@ h3 {
 
 .author-page-intro {
   overflow: hidden;
-  margin-bottom: 2.7em; }
+  margin-bottom: 2.7em;
+  padding-top: 10px; }
   .author-page-intro img {
     max-width: 100%; }
   @media (max-width: 859px) {
@@ -2011,11 +2012,11 @@ h3 .number {
     @media (min-width: 600px) {
       .breadcrumbs .str {
         width: 100px; } }
-  .breadcrumbs span,
-  .breadcrumbs a {
-    font-family: Proximanova bold;
+  .breadcrumbs .razdel {
+    font-family: "lucida-grande-bold";
+    letter-spacing: 1px;
     font-size: 1.5em; }
-  .breadcrumbs a {
+  .breadcrumbs a.razdel {
     border-bottom: 2px solid #000; }
 
 .desktop .proza .breadcrumbs a.razdel:hover {
@@ -2299,8 +2300,15 @@ h3 .number {
   .chuk-share .ya-share2__list_direction_horizontal > .ya-share2__item {
     margin-right: 15px; }
 
+.author-page-text {
+  margin-top: 1.5em; }
+  .author-page-text .breadcrumbs a {
+    font-size: 1.7em;
+    text-decoration: underline;
+    font-family: Proximanova bold; }
+
 .gallery {
-  padding-bottom: 3em; }
+  padding: 1em 0 3em; }
   .gallery h3 {
     font-size: 1.2em; }
 
@@ -2349,8 +2357,7 @@ h3 .number {
 
 .gallery-albom-item {
   display: block;
-  width: 100%;
-  position: relative; }
+  width: 100%; }
   @media (min-width: 860px) {
     .gallery-albom-item {
       width: 49%; } }
@@ -2374,7 +2381,6 @@ h3 .number {
         margin-right: 5em; } }
   .gallery-albom-item .rubric {
     position: absolute;
-    top: 10px;
-    left: 10px; }
+    margin: .9em 0 0 1.2em; }
 
 /*# sourceMappingURL=maps/chukfamily.css.map */
