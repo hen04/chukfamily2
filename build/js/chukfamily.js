@@ -120,10 +120,31 @@ $(function(){
 		]
 	});
 
-
-	$(".fancybox").fancybox({
+	$(".various").fancybox({
+		// width		: '70%',
+		// height		: '70%',
+		autoSize	: true,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none',
 		nextEffect: 'fade',
-		prevEffect: 'fade'
+		prevEffect: 'fade',
+		helpers : {
+			title : {
+				type : 'inside'
+			}
+		},
+		afterShow: function() {
+			$('.fancybox-wrap').swipe({
+					swipe : function(event, direction) {
+							if (direction === 'left' || direction === 'up') {
+									$.fancybox.prev( direction );
+							} else {
+									$.fancybox.next( direction );
+							}
+					}
+			});
+		}
 	});
 
 	$('input').each(function(){

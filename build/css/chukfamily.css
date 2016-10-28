@@ -397,7 +397,7 @@ footer {
     border: 0;
     outline: none;
     cursor: pointer;
-    background: url(../img/next-hover.svg) 0 0 no-repeat;
+    background: url(../img/next-gray.svg) 0 0 no-repeat;
     background-size: 11px 18px;
     width: 11px;
     height: 18px;
@@ -1173,27 +1173,26 @@ h3 {
     width: 30px;
     height: 45px;
     position: absolute;
-    cursor: pointer;
-    background: url(../img/next.svg) 0 0 no-repeat;
-    background-size: 30px 45px; }
+    cursor: pointer; }
     .slick-arrows .slick-arrow:hover {
-      background: url(../img/next-hover.svg) 0 0 no-repeat;
+      background: url(../img/next-gray.svg) 0 0 no-repeat;
       background-size: 30px 45px; }
   .slick-arrows .slick-prev {
-    left: -100px; }
-    .slick-arrows .slick-prev:hover {
-      -ms-transform: rotate(180deg);
-      -webkit-transform: rotate(180deg);
-      transform: rotate(180deg); }
+    left: -100px;
+    background: url(../img/prev.svg) 0 0 no-repeat;
+    background-size: 30px 45px; }
   .slick-arrows .slick-next {
     right: -100px;
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg); }
-    .slick-arrows .slick-next:hover {
-      -ms-transform: rotate(0deg);
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg); }
+    background: url(../img/next.svg) 0 0 no-repeat;
+    background-size: 30px 45px; }
+
+.desktop .slick-arrows .slick-prev:hover {
+  background: url(../img/prev-gray.svg) 0 0 no-repeat;
+  background-size: 30px 45px; }
+
+.desktop .slick-arrows .slick-next:hover {
+  background: url(../img/next-gray.svg) 0 0 no-repeat;
+  background-size: 30px 45px; }
 
 @media (max-width: 599px) {
   .pagination {
@@ -1246,20 +1245,22 @@ h3 {
       background-size: 30px 45px;
       width: 30px;
       height: 45px; }
-      .pagination .prev a:hover,
-      .pagination .next a:hover {
-        background: url(../img/next-hover.svg) 0 0 no-repeat;
-        background-size: 30px 45px;
-        -ms-transform: rotate(180deg);
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg); }
-    .pagination .prev {
+    .pagination .prev a {
+      background: url(../img/prev.svg) 0 0 no-repeat;
+      background-size: 30px 45px;
       margin: 0 3em 0 0; }
-    .pagination .next {
-      -ms-transform: rotate(180deg);
-      -webkit-transform: rotate(180deg);
-      transform: rotate(180deg);
+    .pagination .next a {
+      background: url(../img/next.svg) 0 0 no-repeat;
+      background-size: 30px 45px;
       margin: 0 0 0 3em; } }
+
+.desktop .pagination .prev a:hover {
+  background: url(../img/prev-gray.svg) 0 0 no-repeat;
+  background-size: 30px 45px; }
+
+.desktop .pagination .next a:hover {
+  background: url(../img/next-gray.svg) 0 0 no-repeat;
+  background-size: 30px 45px; }
 
 @media (max-width: 599px) {
   .more-mobile {
@@ -1498,9 +1499,6 @@ h3 {
     position: absolute;
     background: url(../img/next.svg) 0 0 no-repeat;
     background-size: 9px 28px;
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
     width: 9px;
     height: 28px;
     top: 0;
@@ -1516,7 +1514,7 @@ h3 {
   color: #9b9b9b;
   border-bottom-color: #9b9b9b; }
   .desktop .more:hover:after {
-    background: url(../img/next-hover.svg) 0 0 no-repeat;
+    background: url(../img/next-gray.svg) 0 0 no-repeat;
     background-size: 9px 28px;
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
@@ -1722,7 +1720,7 @@ h3 {
         color: #9b9b9b;
         border-bottom: 0; }
         .author-page__item--scene.open .more:after {
-          background: url(../img/next-hover.svg) 0 0 no-repeat;
+          background: url(../img/next-gray.svg) 0 0 no-repeat;
           background-size: 9px 19px;
           -ms-transform: rotate(-90deg);
           -webkit-transform: rotate(-90deg);
@@ -1884,13 +1882,13 @@ h3 .number {
       display: -ms-flex;
       display: -o-flex;
       display: flex;
-      -webkit-justify-content: center;
-      justify-content: center;
       -webkit-align-items: center;
       -ms-align-items: center;
       align-items: center; }
       @media (max-width: 599px) {
         .proza__item h3 {
+          -webkit-justify-content: center;
+          justify-content: center;
           margin-left: -18px;
           font-size: 1.1em; } }
       @media (min-width: 600px) {
@@ -2014,10 +2012,7 @@ h3 .number {
   .breadcrumbs .str {
     height: 20px;
     background: url(../img/next.svg) 50% 0 no-repeat;
-    background-size: 13px 20px;
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg); }
+    background-size: 13px 20px; }
     @media (max-width: 599px) {
       .breadcrumbs .str {
         width: 50px; } }
@@ -2389,3 +2384,55 @@ h3 .number {
   .gallery-albom-item .rubric {
     position: absolute;
     margin: .9em 0 0 1.2em; }
+
+.gallery-list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+  .gallery-list__img {
+    display: block;
+    margin-bottom: 1.3em;
+    position: relative; }
+    @media (max-width: 859px) {
+      .gallery-list__img {
+        width: 48%; } }
+    @media (min-width: 860px) {
+      .gallery-list__img {
+        width: 32%; } }
+    .gallery-list__img:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      outline: 5px solid #f0f0e6; }
+    .gallery-list__img img {
+      max-width: 100%;
+      vertical-align: top; }
+    .gallery-list__img--img:after, .gallery-list__img--video:after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      width: 45px;
+      height: 45px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto; }
+
+.fancybox-title {
+  font-family: Cambria;
+  font-size: 1em; }
+
+.desktop .gallery-list__img:hover:before {
+  outline: 5px solid #c7a033; }
+
+.desktop .gallery-list__img--img:hover:after {
+  background: url(../img/img-ico.svg) 0 0 no-repeat; }
+
+.desktop .gallery-list__img--video:hover:after {
+  background: url(../img/video-ico.svg) 0 0 no-repeat; }

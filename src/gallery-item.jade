@@ -1,9 +1,35 @@
 extends template.jade
 
 block content
-	.breadcrumbs
-		a(href="gallery.html").razdel Галерея
-		span.str
-		span.razdel К.Чуковский: архив 1920г.
-	.gallery
-		1
+	.gallery.gallery--korney
+		.breadcrumbs
+			a(href="gallery.html").razdel Галерея
+			span.str
+			span.razdel К.Чуковский: архив 1920г.
+		.gallery-list
+			a(href="img/img-1.jpg" rel="next" title="Корней Чуковский на прогулке пацанами" class="various").gallery-list__img.gallery-list__img--img
+				img(src="img/img-1.jpg" alt="")
+			a(href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="next" class="various fancybox.iframe").gallery-list__img.gallery-list__img--video
+				img(src="img/img-2.jpg" alt="")
+			a(href="img/img-3.jpg" rel="next"  class="various").gallery-list__img.gallery-list__img--img
+				img(src="img/img-3.jpg" alt="")
+			a(href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="next" class="various fancybox.iframe").gallery-list__img.gallery-list__img--video
+				img(src="img/img-4.jpg" alt="")
+			a(href="img/img-5.jpg" rel="next" class="various").gallery-list__img.gallery-list__img--img
+				img(src="img/img-5.jpg" alt="")
+			a(href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="next" class="various fancybox.iframe").gallery-list__img.gallery-list__img--video
+				img(src="img/img-6.jpg" alt="")
+			a(href="img/img-7.jpg" rel="next" class="various").gallery-list__img.gallery-list__img--img
+				img(src="img/img-7.jpg" alt="")
+		ul.pagination
+				li.prev
+					a(href="")
+				li.active
+					a(href="") 1
+				li
+					a(href="") 2
+				li
+					a(href="") 3
+				li.next
+					a(href="")
+		a(href="").more-mobile Ещё
