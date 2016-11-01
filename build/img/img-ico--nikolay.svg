@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>983ADA8E-0B4D-408C-AA68-42F79FECAC1E</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="45" height="45" rx="3"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="45" height="45" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Artboards" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="7_наведение" transform="translate(-1126.000000, -1017.000000)">
+            <g id="просмотр_фото" transform="translate(1126.000000, 1017.000000)">
+                <use id="Rectangle-709" stroke="#619bba" mask="url(#mask-2)" stroke-width="8" xlink:href="#path-1"></use>
+                <path d="M17.774566,20.3000449 C18.045405,19.8205365 18.4822825,19.8227774 18.7513394,20.3068134 L23.1524889,28.2245253 C23.4211069,28.7077718 23.9286058,28.7581101 24.2826179,28.3409671 L28.2451117,23.671843 C28.6006467,23.2529055 29.1235126,23.284935 29.4225254,23.7585245 L36.4886881,34.9502197 C36.7834207,35.41703 36.5825356,35.7954545 36.0258139,35.7954545 L10.0188835,35.7954545 C9.46851253,35.7954545 9.24170288,35.4070977 9.5127461,34.9272278 L17.774566,20.3000449 Z" id="Rectangle-710" stroke="#619bba" stroke-width="4" transform="translate(23.011174, 27.868773) scale(-1, 1) translate(-23.011174, -27.868773) "></path>
+                <circle id="Oval-103" fill="#619bba" fill-rule="evenodd" cx="12.5" cy="12.7045455" r="3.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

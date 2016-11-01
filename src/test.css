@@ -13,6 +13,36 @@ $max-1365: "max-width: 1365px";
 $min-1366: "min-width: 1366px";
 $min-1600: "min-width: 1600px";
 
+@mixin transition($transition) {
+	-o-transition: ($transition) .4s linear;
+	-moz-transition: ($transition) .4s linear;
+	-webkit-transition: ($transition) .4s linear;
+	transition: ($transition) .4s linear;
+}
+@mixin flexbox() {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+@mixin flex($value) {
+	-webkit-flex-flow: $value;
+	-moz-flex-flow: $value;
+	-ms-flex-flow: $value;
+	-o-flex-flow: $value;
+	flex-flow: $value;
+}
+@mixin alignitems($value) {
+	-webkit-align-items: $value;
+	-ms-align-items: $value;
+	align-items: $value;
+}
+@mixin justifycontent($value) {
+	-webkit-justify-content: $value;
+	justify-content: $value;
+}
+
 + 1_Старт.стр - index.html
 + 2_1_chukfamily-КЧ - author-page.html
 + 2_2_chukfamily-КЧ-читать далее - page-korney.html
@@ -24,7 +54,7 @@ $min-1600: "min-width: 1600px";
 + 3_2_за сценой-т.габбе_(читать далее)
 
 + 4_1_галерея(все подряд)
-- 4_2_галерея(фильтр-КЧ)
++ 4_2_галерея(фильтр-КЧ)
 - 4_3_галерея-выбран альбом
 - 4_4_галерея-выбран альбом-поп_ап_просмотр
 

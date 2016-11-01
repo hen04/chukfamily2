@@ -30,6 +30,30 @@ $min-1600: "min-width: 1600px";
 	-webkit-transition: ($transition) .4s linear;
 	transition: ($transition) .4s linear;
 }
+@mixin flexbox() {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+@mixin flex($value) {
+	-webkit-flex-flow: $value;
+	-moz-flex-flow: $value;
+	-ms-flex-flow: $value;
+	-o-flex-flow: $value;
+	flex-flow: $value;
+}
+@mixin alignitems($value) {
+	-webkit-align-items: $value;
+	-ms-align-items: $value;
+	align-items: $value;
+}
+@mixin justifycontent($value) {
+	-webkit-justify-content: $value;
+	justify-content: $value;
+}
+
 
 @font-face {
 	font-family: 'proximanova';
@@ -158,21 +182,10 @@ em {
 .header-inner {
 	margin: 0 auto;
 	box-sizing: border-box;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	-moz-flex-flow: row wrap;
-	-ms-flex-flow: row wrap;
-	-o-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
-	-webkit-align-items: flex-start;
-	-ms-align-items: flex-start;
-	align-items: flex-start;
+	@include flexbox();
+	@include flex(row wrap);
+	@include alignitems(flex-start);
+	@include justifycontent(space-between);
 	padding: 0 1em;
 	width: 100%;
 	max-width: 1366px;
@@ -281,21 +294,12 @@ header {
 	}
 }
 .first-menu {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
+	@include flexbox();
+	@include justifycontent(space-between);
 	margin: 0;
 	padding: 0;
 	@media ($max-859) {
-		-webkit-flex-flow: column nowrap;
-		-moz-flex-flow: column nowrap;
-		-ms-flex-flow: column nowrap;
-		-o-flex-flow: column nowrap;
-		flex-flow: column nowrap;
+		@include flex(column nowrap);
 	}
 	li {
 		list-style: none;
@@ -442,24 +446,13 @@ footer {
 .footer-inner {
 	margin: 0 auto;
 	padding: 30px 1em;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
+	@include flexbox();
+	@include justifycontent(space-between);
 	box-sizing: border-box;
-	-webkit-flex-flow: row wrap;
-	-moz-flex-flow: row wrap;
-	-ms-flex-flow: row wrap;
-	-o-flex-flow: row wrap;
-	flex-flow: row wrap;
+	@include flex(row wrap);
 	width: 100%;
 	max-width: 1366px;
-	-webkit-align-items: center;
-	-ms-align-items: center;
-	align-items: center;
+	@include alignitems(center);
 	.logo {
 		@media ($max-599) {
 			text-align: center;
@@ -538,16 +531,9 @@ footer {
 	}
 	@media ($min-860) {
 		width: 62.5%;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		-webkit-justify-content: space-between;
-		justify-content: space-between;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
+		@include flexbox();
+		@include alignitems(center);
+		@include justifycontent(space-between);
 	}
 }
 .soc-icons {
@@ -607,25 +593,12 @@ main {
 }
 .author-info {
 	padding-top: 1em;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-webkit-flex-flow: row nowrap;
-	-moz-flex-flow: row nowrap;
-	-ms-flex-flow: row nowrap;
-	-o-flex-flow: row nowrap;
-	flex-flow: row nowrap;
-	-webkit-justify-content: space-around;
-	justify-content: space-around;
+	@include flexbox();
+	@include flex(row nowrap);
+	@include justifycontent(space-between);
 	text-align: center;
 	@media ($max-859) {
-		-webkit-flex-flow: row wrap;
-		-moz-flex-flow: row wrap;
-		-ms-flex-flow: row wrap;
-		-o-flex-flow: row wrap;
-		flex-flow: row wrap;
+		@include flex(row wrap);
 		margin-bottom: 1em;
 	}
 	&__item {
@@ -635,16 +608,8 @@ main {
 		margin-bottom: 1em;
 		@media ($max-859) {
 			width: 45%;
-			display: -webkit-flex;
-			display: -moz-flex;
-			display: -ms-flex;
-			display: -o-flex;
-			display: flex;
-			-webkit-flex-flow: column wrap;
-			-moz-flex-flow: column wrap;
-			-ms-flex-flow: column wrap;
-			-o-flex-flow: column wrap;
-			flex-flow: column wrap;
+			@include flexbox();
+			@include flex(column wrap);
 		}
 		@media ($max-599) {
 			width: 100%;
@@ -737,24 +702,11 @@ main {
 			}
 		}
 	}
-	&--korney {
-		.author-info__img {
-			background-image: url(../img/author-korney.png);
-		}
-	}
-	&--lidia {
-		.author-info__img {
-			background-image: url(../img/author-lidia.png);
-		}
-	}
-	&--elena {
-		.author-info__img {
-			background-image: url(../img/author-elena.png);
-		}
-	}
-	&--nikolay {
-		.author-info__img {
-			background-image: url(../img/author-nikolay.png);
+	@each $family in korney, lidia, elena, nikolay {
+		&--#{$family} {
+			.author-info__img {
+				background-image: url('../img/author-#{$family}.png');
+			}
 		}
 	}
 	&__pic {
@@ -911,18 +863,9 @@ h3 {
 	}
 }
 .material-list {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	-moz-flex-flow: row wrap;
-	-ms-flex-flow: row wrap;
-	-o-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
+	@include flexbox();
+	@include flex(row wrap);
+	@include justifycontent(space-between);
 	margin-bottom: 8px;
 }
 .material {
@@ -937,16 +880,8 @@ h3 {
 	}
 	@media ($min-600) {
 		width: 48%;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		-webkit-flex-flow: column wrap;
-		-moz-flex-flow: column wrap;
-		-ms-flex-flow: column wrap;
-		-o-flex-flow: column wrap;
-		flex-flow: column wrap;
+		@include flexbox();
+		@include flex(column wrap);
 	}
 	img {
 		max-width: 100%;
@@ -1110,29 +1045,18 @@ h3 {
 	}
 	&--big {
 		overflow: hidden;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		-webkit-flex-flow: column nowrap;
-		-moz-flex-flow: column nowrap;
-		-ms-flex-flow: column nowrap;
-		-o-flex-flow: column nowrap;
-		flex-flow: column nowrap;
+		@include flexbox();
+		@include flex(column nowrap);
 		width: 100%;
 		@include transition (all);
 		outline: 7px solid transparent;
 		@media ($max-1023) {
-			-webkit-align-items: flex-start;
-			-ms-align-items: flex-start;
-			align-items: flex-start;
+			@include alignitems(flex-start);
 		}
 		@media ($min-1024) {
 			position: relative;
 			margin-bottom: 3em;
-			-webkit-justify-content: flex-end;
-			justify-content: flex-end;
+			@include justifycontent(space-between);
 			min-height: 460px;
 		}
 		.material-bg {
@@ -1290,14 +1214,8 @@ h3 {
 .material-type {
 	position: absolute;
 	top: 0;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-webkit-align-items: center;
-	-ms-align-items: center;
-	align-items: center;
+	@include flexbox();
+	@include alignitems(center);
 	&__item {
 		text-transform: uppercase;
 		@media ($max-1023) {
@@ -1400,21 +1318,10 @@ h3 {
 		display: none !important;
 	}
 	@media ($min-600) {
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		-webkit-flex-flow: row nowrap;
-		-moz-flex-flow: row nowrap;
-		-ms-flex-flow: row nowrap;
-		-o-flex-flow: row nowrap;
-		flex-flow: row nowrap;
-		-webkit-justify-content: center;
-		justify-content: center;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
+		@include flexbox();
+		@include flex(row nowrap);
+		@include justifycontent(center);
+		@include alignitems(center);
 		width: 100%;
 		margin: 0;
 		padding: 0;
@@ -1503,28 +1410,9 @@ h3 {
 }
 .photomaterial-list {
 	margin: 0 -10px;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
-	// @media ($max-599) {
-	-webkit-flex-flow: row wrap;
-	-moz-flex-flow: row wrap;
-	-ms-flex-flow: row wrap;
-	-o-flex-flow: row wrap;
-	flex-flow: row wrap;
-	// }
-	// @media ($min-600) {
-	// 	-webkit-flex-flow: row nowrap;
-	// 	-moz-flex-flow: row nowrap;
-	// 	-ms-flex-flow: row nowrap;
-	// 	-o-flex-flow: row nowrap;
-	// 	flex-flow: row nowrap;
-	// 	margin-bottom: 40px;
-	// }
+	@include flexbox();
+	@include justifycontent(space-between);
+	@include flex(row wrap);
 }
 .photomaterial {
 	position: relative;
@@ -1811,24 +1699,12 @@ h3 {
 
 .author-page {
 	padding-bottom: 2em;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
+	@include flexbox();
 	@media ($max-859) {
-		-webkit-flex-flow: column wrap;
-		-moz-flex-flow: column wrap;
-		-ms-flex-flow: column wrap;
-		-o-flex-flow: column wrap;
-		flex-flow: column wrap;
+		@include flex(column wrap);
 	}
 	@media ($min-860) {
-		-webkit-flex-flow: row nowrap;
-		-moz-flex-flow: row nowrap;
-		-ms-flex-flow: row nowrap;
-		-o-flex-flow: row nowrap;
-		flex-flow: row nowrap;
+		@include flex(row nowrap);
 	}
 	h2 {
 		font-size: 1.1em;
@@ -1858,18 +1734,9 @@ h3 {
 		}
 	}
 	&__photo-list {
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		-webkit-justify-content: space-between;
-		justify-content: space-between;
-		-webkit-flex-flow: row wrap;
-		-moz-flex-flow: row wrap;
-		-ms-flex-flow: row wrap;
-		-o-flex-flow: row wrap;
-		flex-flow: row wrap;
+		@include flexbox();
+		@include justifycontent(space-between);
+		@include flex(row wrap);
 		@media ($max-859) {
 			margin-bottom: 3em;
 		}
@@ -1934,11 +1801,7 @@ h3 {
 			overflow: hidden;
 			font-family: proximanova bold;
 			margin-bottom: .8em;
-			display: -webkit-flex;
-			display: -moz-flex;
-			display: -ms-flex;
-			display: -o-flex;
-			display: flex;
+			@include flexbox();
 			@media ($max-599) {
 				font-size: 1.2em;
 			}
@@ -2167,18 +2030,11 @@ h3 {
 	border-radius: 50%;
 	background-color: #000;
 	font-family: $LGB;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-align-items: center;
-	-ms-align-items: center;
-	align-items: center;
+	@include flexbox();
+	@include justifycontent(center);
+	@include alignitems(center);
 	box-sizing: border-box;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 .desktop {
 	.author-name {
@@ -2227,17 +2083,10 @@ h3 {
 			font-family: cambria bold;
 			font-size: 1.3em;
 			letter-spacing: 0;
-			display: -webkit-flex;
-			display: -moz-flex;
-			display: -ms-flex;
-			display: -o-flex;
-			display: flex;
-			-webkit-align-items: center;
-			-ms-align-items: center;
-			align-items: center;
+			@include flexbox();
+			@include alignitems(center);
 			@media ($max-599) {
-				-webkit-justify-content: center;
-				justify-content: center;
+				@include justifycontent(center);
 				margin-left: -18px;
 				font-size: 1.1em;
 			}
@@ -2357,40 +2206,21 @@ h3 {
 		text-align: center;
 	}
 	&__dop {
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		-webkit-flex-flow: row nowrap;
-		-moz-flex-flow: row nowrap;
-		-ms-flex-flow: row nowrap;
-		-o-flex-flow: row nowrap;
-		flex-flow: row nowrap;
-		-webkit-justify-content: center;
-		justify-content: center;
+		@include flexbox();
+		@include flex(row nowrap);
+		@include justifycontent(center);
 		.proza-download-lnk {
 			text-align: center;
 		}
 	}
 }
 .breadcrumbs {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	-moz-flex-flow: row wrap;
-	-ms-flex-flow: row wrap;
-	-o-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-align-items: center;
-	-ms-align-items: center;
-	align-items: center;
+	@include flexbox();
+	@include flex(row wrap);
+	@include justifycontent(center);
+	@include alignitems(center);
 	margin-top: 1em;
+	text-align: center;
 	@media ($max-859) {
 		margin-bottom: 1.5em;
 	}
@@ -2404,6 +2234,7 @@ h3 {
 		height: 20px;
 		background: url(../img/next.svg) 50% 0 no-repeat;
 		background-size: 13px 20px;
+		margin-bottom: 15px;
 		@media ($max-599) {
 			width: 50px;
 		}
@@ -2415,6 +2246,7 @@ h3 {
 		font-family: $LGB;
 		letter-spacing: 1px;
 		font-size: 1.5em;
+		margin-bottom: 15px;
 	}
 	a.razdel {
 		border-bottom: 2px solid #000;
@@ -2492,19 +2324,9 @@ h3 {
 	padding-bottom: 1em;
 	&__lnk {
 		margin-bottom: 16px;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		-webkit-flex-flow: row nowrap;
-		-moz-flex-flow: row nowrap;
-		-ms-flex-flow: row nowrap;
-		-o-flex-flow: row nowrap;
-		flex-flow: row nowrap;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
+		@include flexbox();
+		@include flex(row nowrap);
+		@include alignitems(center);
 		p {
 			line-height: 1;
 			margin-bottom: 0;
@@ -2677,32 +2499,17 @@ h3 {
 	text-transform: uppercase;
 	color: #000;
 	letter-spacing: .5px;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-webkit-align-items: center;
-	-ms-align-items: center;
-	align-items: center;
+	@include flexbox();
+	@include alignitems(center);
 	font-size: .8rem;
 	@media ($max-599) {
-		-webkit-flex-flow: column wrap;
-		-moz-flex-flow: column wrap;
-		-ms-flex-flow: column wrap;
-		-o-flex-flow: column wrap;
-		flex-flow: column wrap;
+		@include flex(column wrap);
 		margin-bottom: 3em;
 	}
 	@media ($min-600) {
 		margin-bottom: 5em;
-		-webkit-flex-flow: row nowrap;
-		-moz-flex-flow: row nowrap;
-		-ms-flex-flow: row nowrap;
-		-o-flex-flow: row nowrap;
-		flex-flow: row nowrap;
-		-webkit-justify-content: center;
-		justify-content: center;
+		@include flex(row nowrap);
+		@include justifycontent(center);
 	}
 	a,
 	span {
@@ -2775,9 +2582,37 @@ h3 {
 
 // gallery.html
 .gallery {
-	padding: 1em 0 3em;
+	padding: 1em 0 2em;
 	h3 {
 		font-size: 1.2em;
+	}
+	&--korney {
+		.breadcrumbs {
+			span {
+				color: $korney;
+			}
+		}
+	}
+	&--elena {
+		.breadcrumbs {
+			span {
+				color: $elena;
+			}
+		}
+	}
+	&--lidia {
+		.breadcrumbs {
+			span {
+				color: $lidia;
+			}
+		}
+	}
+	&--nikolay {
+		.breadcrumbs {
+			span {
+				color: $nikolay;
+			}
+		}
 	}
 }
 .gallery-menu {
@@ -2814,18 +2649,9 @@ h3 {
 }
 
 .gallery-albom-list {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	-moz-flex-flow: row wrap;
-	-ms-flex-flow: row wrap;
-	-o-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
+	@include flexbox();
+	@include flex(row wrap);
+	@include justifycontent(space-between);
 	margin-bottom: 1.3em;
 }
 .gallery-albom-item {
@@ -2861,33 +2687,33 @@ h3 {
 }
 
 .gallery-list {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	&__img {
+	padding-bottom: 1em;
+	@include flexbox();
+	@include flex(row wrap);
+	@include justifycontent(space-between);
+	&__item {
 		display: block;
 		margin-bottom: 1.3em;
-		position: relative;
 		@media ($max-859) {
 			width: 48%;
 		}
 		@media ($min-860) {
 			width: 32%;
 		}
+		img {
+			max-width: 100%;
+			vertical-align: top;
+		}
+	}
+	&__img {
+		position: relative;
+		margin-bottom: 1em;
 		&:before {
 			content: '';
 			position: absolute;
 			width: 100%;
 			height: 100%;
 			outline: 5px solid #f0f0e6;
-		}
-		img {
-			max-width: 100%;
-			vertical-align: top;
 		}
 		&--img,
 		&--video {
@@ -2906,28 +2732,73 @@ h3 {
 		}
 	}
 }
-.fancybox-title {
-	font-family: Cambria;
-	font-size: 1em;
-}
+
 .desktop {
-	.gallery-list__img {
-		&:hover {
-			&:before {
-				outline: 5px solid $korney;
-			}
-		}
-		&--img {
-			&:hover {
-				&:after {
-					background: url(../img/img-ico.svg) 0 0 no-repeat;
+	.gallery {
+		@each $family in korney, lidia, elena, nikolay {
+			&--#{$family} {
+				.gallery-list__item {
+					&:hover {
+						.gallery-list__img {
+							&:before {
+								outline: 5px solid #{$family};
+							}
+							&--img {
+								&:after {
+									background-image: url('../img/img-ico--#{$family}.svg');
+								}
+							}
+							&--video {
+								&:after {
+									background-image: url('../img/video-ico--#{$family}.svg');
+								}
+							}
+						}
+					}
 				}
 			}
 		}
-		&--video {
-			&:hover {
-				&:after {
-					background: url(../img/video-ico.svg) 0 0 no-repeat;
+		&--korney {
+			.gallery-list__item {
+				&:hover {
+					.gallery-list__img {
+						&:before {
+							outline: 5px solid $korney;
+						}
+					}
+				}
+			}
+		}
+		&--lidia {
+			.gallery-list__item {
+				&:hover {
+					.gallery-list__img {
+						&:before {
+							outline: 5px solid $lidia;
+						}
+					}
+				}
+			}
+		}
+		&--elena {
+			.gallery-list__item {
+				&:hover {
+					.gallery-list__img {
+						&:before {
+							outline: 5px solid $elena;
+						}
+					}
+				}
+			}
+		}
+		&--nikolay {
+			.gallery-list__item {
+				&:hover {
+					.gallery-list__img {
+						&:before {
+							outline: 5px solid $nikolay;
+						}
+					}
 				}
 			}
 		}

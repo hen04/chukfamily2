@@ -1,0 +1,31 @@
+extends template.jade
+
+block content
+	.gallery.gallery--lidia
+		.breadcrumbs
+			a(href="gallery.html").razdel Галерея
+			span.str
+			span.razdel Е. Чуковская: видео
+		.gallery-list
+			a(href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="next" class="various fancybox.iframe" title="Пример").gallery-list__item
+				.gallery-list__img.gallery-list__img--video
+					img(src="img/img-2.jpg" alt="")
+				span Пример
+			a(href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="next" class="various fancybox.iframe").gallery-list__item
+				.gallery-list__img.gallery-list__img--video
+					img(src="img/img-4.jpg" alt="")
+			a(href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="next" class="various fancybox.iframe").gallery-list__item
+				.gallery-list__img.gallery-list__img--video
+					img(src="img/img-6.jpg" alt="")
+		ul.pagination
+				li.prev
+					a(href="")
+				li.active
+					a(href="") 1
+				li
+					a(href="") 2
+				li
+					a(href="") 3
+				li.next
+					a(href="")
+		a(href="").more-mobile Ещё

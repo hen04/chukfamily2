@@ -101,15 +101,21 @@
 	position: absolute;
 	top: 20px;
 	right: 15px;
-	width: 35px;
-	height: 35px;
+	width: 30px;
+	height: 30px;
 	cursor: pointer;
 	z-index: 8040;
 	background: url(../img/close.svg) 0 0 no-repeat;
 	-webkit-background-size: 30px 30px;
 	background-size: 30px 30px;
 }
-
+.mobile .fancybox-close {
+	background: url(../img/menu-close.svg) 0 0 no-repeat;
+	-webkit-background-size: 30px 30px;
+	background-size: 30px 30px;
+	top: -15px;
+	right: -15px;
+}
 .fancybox-nav {
 	position: absolute;
 	top: 0;
@@ -129,7 +135,9 @@
 .fancybox-next {
 	right: 0;
 }
-
+.mobile .fancybox-nav span {
+	display: none;
+}
 .fancybox-nav span {
 	position: absolute;
 	top: 50%;
@@ -139,7 +147,6 @@
 	cursor: pointer;
 	z-index: 8040;
 }
-
 .fancybox-prev span {
 	left: 10px;
 	background: url('../img/prev-white.svg') 0 0 no-repeat;
@@ -213,6 +220,10 @@
 	text-shadow: none;
 	z-index: 8050;
 }
+.fancybox-title {
+	font-family: Cambria;
+	font-size: 1em;
+}
 
 .fancybox-opened .fancybox-title {
 	visibility: visible;
@@ -261,20 +272,4 @@
 	padding: 10px;
 	background: #000;
 	background: rgba(0, 0, 0, .8);
-}
-
-/*Retina graphics!*/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	   only screen and (min--moz-device-pixel-ratio: 1.5),
-	   only screen and (min-device-pixel-ratio: 1.5){
-
-	#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-		background-image: url('../img/fancybox_sprite@2x.png');
-		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
-	}
-
-	#fancybox-loading div {
-		background-image: url('../img/fancybox_loading@2x.gif');
-		background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
-	}
 }
