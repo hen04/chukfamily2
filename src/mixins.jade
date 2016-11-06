@@ -50,8 +50,15 @@ mixin scenePage (header, number, text)
 		p=text
 
 // gallery.html
-mixin galleryAlbom (href, data, modifier, img, name)
-	a(href=href data-result=data).gallery-albom-item
-		.rubric(class=modifier)
-		img(src=img, alt="")
+mixin galleryAlbom (href, data, familymodifier, modifier, img, name)
+	a(href=href data-result=data class=familymodifier).gallery-albom-item
+		.gallery-albom-item__img
+			.rubric(class=modifier)
+			img(src=img, alt="")
 		h4=name
+
+mixin eventItem (date, place, header)
+	.events-item__info
+		span.events-item__date=date
+		span.events-item__place=place
+	h4=header

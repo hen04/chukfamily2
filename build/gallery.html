@@ -77,24 +77,36 @@
           <div class="gallery">
             <h3>Фото и видео материалы</h3>
             <ul class="gallery-menu">
-              <li data-item="all" class="active"> <span>все</span></li>
-              <li data-item="korney"> <span>К. Чуковский</span></li>
-              <li data-item="lidia"> <span>Л. Чуковская</span></li>
-              <li data-item="elena"> <span>Е. Чуковская</span></li>
-              <li data-item="nikolay"> <span>Н. Чуковский</span></li>
+              <li class="active"> <a href="#">все</a></li>
+              <li><a href="#">К. Чуковский</a></li>
+              <li><a href="#">Л. Чуковская</a></li>
+              <li><a href="#">Е. Чуковская</a></li>
+              <li><a href="#">Н. Чуковский</a></li>
             </ul>
-            <div class="gallery-albom-list"><a href="gallery-item-photo.html" data-result="korney" class="gallery-albom-item">
-                <div class="rubric rubric--korney"></div><img src="img/gallery-1.jpg" alt=""/>
-                <h4>К. Чуковский: архив 1920 г</h4></a><a href="gallery-item-video.html" data-result="lidia" class="gallery-albom-item">
-                <div class="rubric rubric--lidia"></div><img src="img/gallery-2.jpg" alt=""/>
-                <h4>Корней и Лидия Чуковские в гостях у кого-то</h4></a><a href="#" data-result="elena" class="gallery-albom-item">
-                <div class="rubric rubric--elena"></div><img src="img/gallery-3.jpg" alt=""/>
-                <h4>Елена Чуковская в каком-то саду</h4></a><a href="#" data-result="korney" class="gallery-albom-item">
-                <div class="rubric rubric--korney"></div><img src="img/gallery-4.jpg" alt=""/>
-                <h4>Корней и Елена Чуковские с кем-то и где-то</h4></a><a href="#" data-result="elena" class="gallery-albom-item">
-                <div class="rubric rubric--elena"></div><img src="img/gallery-5.jpg" alt=""/>
-                <h4>Елена Чуковская в каком-то саду</h4></a><a href="#" data-result="nikolay" class="gallery-albom-item">
-                <div class="rubric rubric--nikolay"></div><img src="img/gallery-6.jpg" alt=""/>
+            <div class="gallery-albom-list"><a href="gallery-item-photo.html" data-result="korney" class="gallery-albom-item--korney gallery-albom-item">
+                <div class="gallery-albom-item__img">
+                  <div class="rubric rubric--korney"></div><img src="img/gallery-1.jpg" alt=""/>
+                </div>
+                <h4>К. Чуковский: архив 1920 г</h4></a><a href="gallery-item-video.html" data-result="lidia" class="gallery-albom-item--lidia gallery-albom-item">
+                <div class="gallery-albom-item__img">
+                  <div class="rubric rubric--lidia"></div><img src="img/gallery-2.jpg" alt=""/>
+                </div>
+                <h4>Корней и Лидия Чуковские в гостях у кого-то</h4></a><a href="#" data-result="elena" class="gallery-albom-item--elena gallery-albom-item">
+                <div class="gallery-albom-item__img">
+                  <div class="rubric rubric--elena"></div><img src="img/gallery-3.jpg" alt=""/>
+                </div>
+                <h4>Елена Чуковская в каком-то саду</h4></a><a href="#" data-result="korney" class="gallery-albom-item--korney gallery-albom-item">
+                <div class="gallery-albom-item__img">
+                  <div class="rubric rubric--korney"></div><img src="img/gallery-4.jpg" alt=""/>
+                </div>
+                <h4>Корней и Елена Чуковские с кем-то и где-то</h4></a><a href="#" data-result="elena" class="gallery-albom-item--elena gallery-albom-item">
+                <div class="gallery-albom-item__img">
+                  <div class="rubric rubric--elena"></div><img src="img/gallery-5.jpg" alt=""/>
+                </div>
+                <h4>Елена Чуковская в каком-то саду</h4></a><a href="#" data-result="nikolay" class="gallery-albom-item--nikolay gallery-albom-item">
+                <div class="gallery-albom-item__img">
+                  <div class="rubric rubric--nikolay"></div><img src="img/gallery-6.jpg" alt=""/>
+                </div>
                 <h4>Корней и Елена Чуковские с кем-то и где-то</h4></a>
             </div>
             <ul class="pagination">
@@ -127,10 +139,10 @@
     </footer>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="js/slick.min.js"></script>
+  <script src="js/device.min.js"></script>
   <script src="js/jquery.fancybox.pack.js"></script>
   <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
   <script src="js/jquery.touchSwipe.js"></script>
-  <script src="js/device.min.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/chukfamily.js"></script>
 </html>

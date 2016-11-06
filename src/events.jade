@@ -1,0 +1,29 @@
+extends template.jade
+
+block content
+	.events
+		h3 Предстоящие события
+		.events-list.events-list--new
+			a(href="events-item-new.html").events-item.events-item--scene
+				p
+					img(src="img/event-1.jpg", alt="")
+				+eventItem('10.04.2009 13:00', 'Москва, Библиотека им. Достоевского', 'Вечер памяти Лидии Чуковской «Открытое слово»')
+			a(href="events-item-new.html").events-item.events-item--lidia
+				p
+					img(src="img/event-2.jpg", alt="")
+				+eventItem('21.03.2013 15:00', 'Москва, Библиотека им. Достоевского', 'Вечер памяти Лидии Чуковской «Открытое слово»')
+		h3 Прошедшие события
+		.events-list.events-list--old
+			a(href="events-item.html").events-item.events-item--korney
+				+eventItem('22.03.2014', 'Москва, Библиотека им. Достоевского', 'Вечер памяти Лидии Чуковской «Открытое слово»')
+			a(href="events-item.html").events-item.events-item--lidia
+				+eventItem('22.03.2014', 'Москва, Библиотека им. Достоевского', 'Церемония вручения Е.Ц. Чуковской литературной премии А. Солженицына')
+			a(href="events-item.html").events-item.events-item--elena
+				+eventItem('22.03.2014', '', 'Церемония вручения Е.Ц. Чуковской литературной премии А. Солженицына')
+			a(href="events-item.html").events-item.events-item--nikolay
+				+eventItem('22.03.2014', 'Москва, Библиотека им. Достоевского', 'Презентация первого отдельного издания «Софьи Петровны»')
+			a(href="events-item.html").events-item.events-item--korney
+				+eventItem('22.03.2014', 'Москва, Библиотека им. Достоевского', 'Церемония вручения премии имени Александра Блока Е.Ц. Чуковской')
+			a(href="events-item.html").events-item.events-item--lidia
+				+eventItem('22.03.2014', 'Москва, Библиотека им. Достоевского', 'Научная конференция К.И. и Л.К. Чуковские: двойной юбилей')
+			include incl-pagination.jade

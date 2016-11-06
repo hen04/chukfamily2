@@ -4,6 +4,7 @@ $korney: #c7a033;
 $lidia: #759453;
 $elena: #c3636f;
 $nikolay: #619bba;
+$scene: #795f37;
 $gray: #9b9b9b;
 $LG: 'lucida-grande';
 $LGB: 'lucida-grande-bold';
@@ -351,7 +352,7 @@ header {
 		&:nth-child(3) {
 			li {
 				a:hover {
-					color: #795f37;
+					color: $scene;
 				}
 			}
 		}
@@ -851,7 +852,6 @@ h3 {
 		}
 	}
 	h3 {
-		margin-bottom: 1.5em;
 		@media ($max-859) {
 			font-weight: 700;
 			font-size: 1em;
@@ -1112,6 +1112,7 @@ h3 {
 					letter-spacing: 2.4px;
 					text-align: center;
 					font-size: 2.3em;
+					margin: 0;
 				}
 			}
 		}
@@ -1670,9 +1671,6 @@ h3 {
 			&:after {
 				background: url(../img/next-gray.svg) 0 0 no-repeat;
 				background-size: 9px 28px;
-				-ms-transform: rotate(0deg);
-				-webkit-transform: rotate(0deg);
-				transform: rotate(0deg);
 				@media ($min-600) {
 					background-size: 12px 28px;
 				}
@@ -1772,7 +1770,6 @@ h3 {
 		}
 	}
 	&__item {
-		overflow: hidden;
 		@media ($max-599) {
 			margin-bottom: 0;
 		}
@@ -1789,11 +1786,9 @@ h3 {
 			}
 		}
 		.img-border {
+			position: relative;
 			@media ($min-600) {
 				margin-bottom: 1.8em;
-			}
-			@media ($min-1024) {
-				border: 5px solid transparent;
 			}
 		}
 		h3 {
@@ -1870,16 +1865,9 @@ h3 {
 			}
 			.more {
 				&:after {
-					-ms-transform: rotate(-90deg);
-					-webkit-transform: rotate(-90deg);
-					transform: rotate(-90deg);
-				}
-				&:hover {
-					&:after {
-						-ms-transform: rotate(90deg);
-						-webkit-transform: rotate(90deg);
-						transform: rotate(90deg);
-					}
+					-ms-transform: rotate(90deg);
+					-webkit-transform: rotate(90deg);
+					transform: rotate(90deg);
 				}
 			}
 			&.open {
@@ -1901,6 +1889,7 @@ h3 {
 		}
 	}
 	&__text {
+		overflow: hidden;
 		@media ($max-599) {
 			display: none;
 		}
@@ -1930,54 +1919,34 @@ h3 {
 	.more {
 		margin-top: 15px;
 	}
-	&--korney {
-		@media ($min-1024) {
-			.author-page__item:hover .img-border {
-				border: 5px solid $korney;
-			}
-			.author-page__item:hover {
-				h3 a {
-					color: $korney;
-					border-bottom: 3px solid transparent;
-				}
+}
+
+.desktop {
+	.author-page__lnk {
+		&:hover {
+			a {
+				color: $scene;
+				text-decoration: none;
 			}
 		}
 	}
-	&--lidia {
-		@media ($min-1024) {
-			.author-page__item:hover .img-border {
-				border: 5px solid $lidia;
-			}
-			.author-page__item:hover {
-				h3 a {
-					color: $lidia;
-					border-bottom: 3px solid transparent;
-				}
-			}
+	.author-page__articles a {
+		&:hover {
+			color: $scene;
+			text-decoration: none;
 		}
 	}
-	&--elena {
-		@media ($min-1024) {
-			.author-page__item:hover .img-border {
-				border: 5px solid $elena;
-			}
-			.author-page__item:hover {
-				h3 a {
-					color: $elena;
-					border-bottom: 3px solid transparent;
-				}
-			}
-		}
-	}
-	&--nikolay {
-		@media ($min-1024) {
-			.author-page__item:hover .img-border {
-				border: 5px solid $nikolay;
-			}
-			.author-page__item:hover {
-				h3 a {
-					color: $nikolay;
-					border-bottom: 3px solid transparent;
+	@each $family, $color in (korney, $korney), (lidia, $lidia), (elena, $elena), (nikolay, $nikolay) {
+		.author-page--#{$family} {
+			.author-page__item {
+				&:hover {
+					.img-border {
+						outline: 5px solid #{$color};
+					}
+					h3 a {
+						color: $color;
+						border-bottom: 3px solid transparent;
+					}
 				}
 			}
 		}
@@ -2253,6 +2222,14 @@ h3 {
 	}
 }
 .desktop {
+	.breadcrumbs {
+		a {
+			&:hover {
+				border-bottom-color: transparent;
+				@include transition(all);
+			}
+		}
+	}
 	.proza {
 		.breadcrumbs {
 			a.razdel {
@@ -2406,6 +2383,9 @@ h3 {
 		font-family: cambria italic;
 		line-height: 1.3;
 	}
+	ol {
+		padding: 0 0 0 22px;
+	}
 }
 .desktop .proza-contents__lnk a {
 	&:hover {
@@ -2539,10 +2519,15 @@ h3 {
 .proza-tags {
 	background-color: #fff;
 	padding: 10px 15px;
-	color: $gray;
 	margin: 0 -20px 20px;
-	font-family: proximanova;
-	font-size: 1em;
+	&--events {
+		margin: 0 0 20px -20px;
+	}
+	span {
+		color: $gray;
+		font-family: proximanova;
+		font-size: .8em;
+	}
 	a {
 		font-family: $LGB;
 		color: $gray;
@@ -2565,6 +2550,9 @@ h3 {
 	.ya-share2__list_direction_horizontal > .ya-share2__item {
 		margin-right: 15px;
 	}
+	&--events {
+		margin: 0 0 20px -20px;
+	}
 }
 
 
@@ -2574,7 +2562,8 @@ h3 {
 	.breadcrumbs {
 		a {
 			font-size: 1.7em;
-			text-decoration: underline;
+			border-bottom: 2px solid #000;
+			margin-bottom: 10px;
 			font-family: Proximanova bold;
 		}
 	}
@@ -2586,31 +2575,12 @@ h3 {
 	h3 {
 		font-size: 1.2em;
 	}
-	&--korney {
-		.breadcrumbs {
-			span {
-				color: $korney;
-			}
-		}
-	}
-	&--elena {
-		.breadcrumbs {
-			span {
-				color: $elena;
-			}
-		}
-	}
-	&--lidia {
-		.breadcrumbs {
-			span {
-				color: $lidia;
-			}
-		}
-	}
-	&--nikolay {
-		.breadcrumbs {
-			span {
-				color: $nikolay;
+	@each $family, $color in (korney, $korney), (lidia, $lidia), (elena, $elena), (nikolay, $nikolay) {
+		&--#{$family} {
+			.breadcrumbs {
+				span {
+					color: #{$color}
+				}
 			}
 		}
 	}
@@ -2639,8 +2609,11 @@ h3 {
 		@media ($min-860) {
 			font-size: .6em;
 		}
+		a {
+			color: $gray;
+		}
 		&.active {
-			span {
+			a {
 				color: #000;
 				border-bottom: 2px solid #000;
 			}
@@ -2685,7 +2658,20 @@ h3 {
 		margin: .9em 0 0 1.2em;
 	}
 }
-
+@each $family, $color in (korney, $korney), (lidia, $lidia), (elena, $elena), (nikolay, $nikolay) {
+	.desktop {
+		.gallery-albom-item--#{$family} {
+			&:hover {
+				.gallery-albom-item__img {
+					outline: 5px solid #{$color};
+				}
+				h4 {
+					color: #{$color};
+				}
+			}
+		}
+	}
+}
 .gallery-list {
 	padding-bottom: 1em;
 	@include flexbox();
@@ -2694,7 +2680,10 @@ h3 {
 	&__item {
 		display: block;
 		margin-bottom: 1.3em;
-		@media ($max-859) {
+		@media ($max-479) {
+			width: 100%;
+		}
+		@media ($min-480) and ($max-859) {
 			width: 48%;
 		}
 		@media ($min-860) {
@@ -2707,7 +2696,6 @@ h3 {
 	}
 	&__img {
 		position: relative;
-		margin-bottom: 1em;
 		&:before {
 			content: '';
 			position: absolute;
@@ -2731,17 +2719,20 @@ h3 {
 			}
 		}
 	}
+	p {
+		margin-top: .5em;
+	}
 }
 
 .desktop {
 	.gallery {
-		@each $family in korney, lidia, elena, nikolay {
+		@each $family, $color in (korney, $korney), (lidia, $lidia), (elena, $elena), (nikolay, $nikolay) {
 			&--#{$family} {
 				.gallery-list__item {
 					&:hover {
 						.gallery-list__img {
 							&:before {
-								outline: 5px solid #{$family};
+								outline: 5px solid #{$color};
 							}
 							&--img {
 								&:after {
@@ -2754,53 +2745,178 @@ h3 {
 								}
 							}
 						}
-					}
-				}
-			}
-		}
-		&--korney {
-			.gallery-list__item {
-				&:hover {
-					.gallery-list__img {
-						&:before {
-							outline: 5px solid $korney;
+						p {
+							color: #{$color};
 						}
 					}
 				}
 			}
 		}
-		&--lidia {
-			.gallery-list__item {
+	}
+}
+
+
+/* events */
+.events {
+	margin: 1em 0 2em;
+	h3 {
+		@media ($max-859) {
+			font-weight: 700;
+			font-size: 1em;
+			margin-bottom: 1.5em;
+		}
+		@media ($min-860) {
+			font-size: 1.1em;
+			margin-bottom: 2em;
+		}
+	}
+}
+.events-list {
+	@include flexbox();
+	@include flex(row wrap);
+	@include justifycontent(center);
+	&--new {
+		.events-item {
+			p {
+				position: relative;
+				margin-bottom: 25px;
+				&:before {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					outline: 5px solid transparent;
+				}
+			}
+			img {
+				max-width: 100%;
+				vertical-align: top;
+			}
+			h4 {
+				@media ($min-860) {
+					margin: 0 25px;
+				}
+			}
+			.events-item__info {
+				@media ($max-859) {
+					margin-bottom: 10px;
+				}
+				@media ($min-860) {
+					margin: 0 25px 10px;
+				}
+			}
+		}
+		h4 {
+			font-family: Cambria;
+		}
+	}
+	&--old {
+		.events-item {
+			border: 5px solid #000;
+			padding: 20px;
+			h4 {
+				margin-bottom: 1.5em;
+			}
+			.events-item__info {
+				margin-bottom: 1.3em;
+			}
+		}
+	}
+}
+.events-item {
+	box-sizing: border-box;
+	@media ($max-859) {
+		width: 100%;
+		margin-bottom: 2em;
+	}
+	@media ($min-860) {
+		margin: 0 1.5% 2em;
+		width: 47%;
+		max-width: 550px;
+	}
+	h4 {
+		font-weight: 700;
+		font-size: 1em;
+		line-height: 1.2;
+		margin: 0;
+		font-family: Cambria;
+	}
+	&__info {
+		font-family: proximanova;
+		height: 28px;
+		span {
+			display: block;
+			font-size: 14px;
+		}
+	}
+	&__place {
+		font-weight: 700;
+	}
+}
+.events-no {
+	margin-bottom: 2em;
+	h4 {
+		margin: 0;
+		font-size: 1.2em;
+		text-align: center;
+	}
+}
+@each $family, $color in (korney, $korney), (lidia, $lidia), (elena, $elena), (nikolay, $nikolay), (scene, $scene) {
+	.desktop {
+		.events-list--old {
+			.events-item--#{$family} {
 				&:hover {
-					.gallery-list__img {
-						&:before {
-							outline: 5px solid $lidia;
-						}
+					border: 5px solid #{$color};
+					h4 {
+						color: #{$color};
 					}
 				}
 			}
 		}
-		&--elena {
-			.gallery-list__item {
+		.events-list--new {
+			.events-item--#{$family} {
 				&:hover {
-					.gallery-list__img {
+					p {
 						&:before {
-							outline: 5px solid $elena;
+							outline: 5px solid #{$color};
 						}
+					}
+					h4 {
+						color: #{$color};
 					}
 				}
 			}
 		}
-		&--nikolay {
-			.gallery-list__item {
-				&:hover {
-					.gallery-list__img {
-						&:before {
-							outline: 5px solid $nikolay;
-						}
-					}
-				}
-			}
+	}
+}
+
+.events-info {
+	h1 {
+		text-align: center;
+		font-size: 1.6em;
+		margin-bottom: 2em;
+	}
+}
+
+.events-audio {
+	@include transition (width);
+	margin: 0 auto 2em;
+	@media ($max-599) {
+		width: 100%;
+	}
+	@media ($min-860) {
+		width: 90%;
+	}
+	@media ($min-1024) {
+		width: 70%;
+	}
+	&__list {
+		margin-bottom: 4em;
+	}
+	&__item {
+		margin-bottom: 15px;
+		p {
+			margin-bottom: 10px;
 		}
 	}
 }

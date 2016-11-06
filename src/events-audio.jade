@@ -1,0 +1,69 @@
+extends template.jade
+
+block content
+	.breadcrumbs
+		a(href="events.html").razdel Мероприятия
+		span.str
+		a(href="events-item.html").razdel 06.05.2016
+		span.str
+		span.razdel Выступления
+	.events-audio
+		.events-audio__list
+			.events-audio__item
+				p О.Г. Стёпина
+				audio(controls)
+					source(src="audio/director.ogg" type="audio/ogg; codecs=vorbis")
+					source(src="http://www.chukfamily.ru/Sounds/director.mp3")
+					| Тег audio не поддерживается вашим браузером. 
+					a(href="http://www.chukfamily.ru/Sounds/director.mp3") Скачать
+			.events-audio__item
+				p Е.Ц. Чуковская - телефонное обращение
+				audio(controls)
+					source(src="audio/elena.ogg" type="audio/ogg; codecs=vorbis")
+					source(src="http://www.chukfamily.ru/Sounds/elena.mp3")
+					| Тег audio не поддерживается вашим браузером. 
+					a(href="http://www.chukfamily.ru/Sounds/elena.mp3") Скачать
+			.events-audio__item
+				p С.А. Лурье
+				audio(controls)
+					source(src="audio/lurie.ogg" type="audio/ogg; codecs=vorbis")
+					source(src="http://www.chukfamily.ru/Sounds/lurie.mp3")
+					| Тег audio не поддерживается вашим браузером. 
+					a(href="http://www.chukfamily.ru/Sounds/lurie.mp3") Скачать
+			.events-audio__item
+				p Е.Н. Симонова
+				audio(controls)
+					source(src="audio/pravda.ogg" type="audio/ogg; codecs=vorbis")
+					source(src="http://www.chukfamily.ru/Sounds/pravda.mp3")
+					| Тег audio не поддерживается вашим браузером. 
+					a(href="http://www.chukfamily.ru/Sounds/pravda.mp3") Скачать
+			.events-audio__item
+				p П.М. Крючков
+				audio(controls)
+					source(src="audio/pavel.ogg" type="audio/ogg; codecs=vorbis")
+					source(src="http://www.chukfamily.ru/Sounds/pavel.mp3")
+					| Тег audio не поддерживается вашим браузером. 
+					a(href="http://www.chukfamily.ru/Sounds/pavel.mp3") Скачать
+			.events-audio__item
+				p Ю.Б. Сычёва
+				audio(controls)
+					source(src="audio/julia.ogg" type="audio/ogg; codecs=vorbis")
+					source(src="http://www.chukfamily.ru/Sounds/julia.mp3")
+					| Тег audio не поддерживается вашим браузером. 
+					a(href="http://www.chukfamily.ru/Sounds/julia.mp3") Скачать
+			.events-audio__item
+				p Священник о. Иоанн Привалов
+				audio(controls)
+					source(src="audio/ioann.ogg" type="audio/ogg; codecs=vorbis")
+					source(src="http://www.chukfamily.ru/Sounds/ioann.mp3")
+					| Тег audio не поддерживается вашим браузером. 
+					a(href="http://www.chukfamily.ru/Sounds/ioann.mp3") Скачать
+		.proza-tags
+			span Тема: 
+			a(href="") Корней Чуковский
+			a(href="") Критика
+			a(href="") 1965 год
+		.chuk-share
+			<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+			<script src="//yastatic.net/share2/share.js"></script>
+			<div class="ya-share2" data-services="facebook,gplus,twitter,vkontakte" data-counter=""></div>

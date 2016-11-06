@@ -1,0 +1,35 @@
+extends template.jade
+
+block content
+	.breadcrumbs
+		a(href="events.html").razdel Мероприятия
+		span.str
+		str.razdel 06.05.2016
+	.events-info
+		h1 Вечер памяти Л. Чуковской 
+	.author-page.author-page--scene
+		.author-page__photo
+			.author-page__photo-list
+				.author-page__photo-item
+					a(href="")
+						img(src="img/event-2.jpg", alt="")
+		.author-page__category
+			.author-page__item.author-page__item--lidia
+				p Вечер состоится 2 января 2017 г. В музее Ф.М. Достоевского. Начало в 17 часов. 
+				h3
+					span.header Выступления
+				.author-page__info
+					p.author-page__lnk О.Г. Стёпина
+					p.author-page__lnk Е.Н. Симонова
+					p.author-page__lnk П.М. Крючков
+					p.author-page__lnk Ю.Б. Сычёва
+					p.author-page__lnk Священник о. Иоанн Привалов
+				.proza-tags.proza-tags--events
+					span Тема:
+					a(href="") Корней Чуковский
+					a(href="") Критика
+					a(href="") 1965 год
+				.chuk-share.chuk-share--events
+					<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+					<script src="//yastatic.net/share2/share.js"></script>
+					<div class="ya-share2" data-services="facebook,gplus,twitter,vkontakte" data-counter=""></div>

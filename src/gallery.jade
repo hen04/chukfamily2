@@ -4,23 +4,23 @@ block content
 	.gallery
 		h3 Фото и видео материалы
 		ul.gallery-menu
-			li(data-item="all").active 
-				span все
-			li(data-item="korney") 
-				span К. Чуковский
-			li(data-item="lidia") 
-				span Л. Чуковская
-			li(data-item="elena") 
-				span Е. Чуковская
-			li(data-item="nikolay") 
-				span Н. Чуковский
+			li.active 
+				a(href="#") все
+			li
+				a(href="#") К. Чуковский
+			li
+				a(href="#") Л. Чуковская
+			li
+				a(href="#") Е. Чуковская
+			li
+				a(href="#") Н. Чуковский
 		.gallery-albom-list
-			+galleryAlbom('gallery-item-photo.html', 'korney', 'rubric--korney', 'img/gallery-1.jpg', 'К. Чуковский: архив 1920 г')
-			+galleryAlbom('gallery-item-video.html', 'lidia', 'rubric--lidia', 'img/gallery-2.jpg', 'Корней и Лидия Чуковские в гостях у кого-то')
-			+galleryAlbom('#', 'elena', 'rubric--elena', 'img/gallery-3.jpg', 'Елена Чуковская в каком-то саду')
-			+galleryAlbom('#', 'korney', 'rubric--korney', 'img/gallery-4.jpg', 'Корней и Елена Чуковские с кем-то и где-то')
-			+galleryAlbom('#', 'elena', 'rubric--elena', 'img/gallery-5.jpg', 'Елена Чуковская в каком-то саду')
-			+galleryAlbom('#', 'nikolay', 'rubric--nikolay', 'img/gallery-6.jpg', 'Корней и Елена Чуковские с кем-то и где-то')
+			+galleryAlbom('gallery-item-photo.html', 'korney', 'gallery-albom-item--korney', 'rubric--korney', 'img/gallery-1.jpg', 'К. Чуковский: архив 1920 г')
+			+galleryAlbom('gallery-item-video.html', 'lidia', 'gallery-albom-item--lidia', 'rubric--lidia', 'img/gallery-2.jpg', 'Корней и Лидия Чуковские в гостях у кого-то')
+			+galleryAlbom('#', 'elena', 'gallery-albom-item--elena', 'rubric--elena', 'img/gallery-3.jpg', 'Елена Чуковская в каком-то саду')
+			+galleryAlbom('#', 'korney', 'gallery-albom-item--korney', 'rubric--korney', 'img/gallery-4.jpg', 'Корней и Елена Чуковские с кем-то и где-то')
+			+galleryAlbom('#', 'elena', 'gallery-albom-item--elena', 'rubric--elena', 'img/gallery-5.jpg', 'Елена Чуковская в каком-то саду')
+			+galleryAlbom('#', 'nikolay', 'gallery-albom-item--nikolay', 'rubric--nikolay', 'img/gallery-6.jpg', 'Корней и Елена Чуковские с кем-то и где-то')
 		ul.pagination
 				li.prev
 					a(href="")

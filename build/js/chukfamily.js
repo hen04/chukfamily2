@@ -35,13 +35,6 @@ $(function(){
 		$this.secondMenu();
 	});
 
-// secondMenu close resize
-	// function windowResize(){
-	// 	secondMenu.stop().slideUp();
-	// 	$('.js-menu').removeClass('active');
-	// }
-	// $(window).on('resize',windowResize);
-
 
 // scene-page show all material
 	var sceneLnk = 4, // - количество отображаемых ссылок в блоке
@@ -120,6 +113,12 @@ $(function(){
 		]
 	});
 
+	if( $('html').hasClass('desktop') ) {
+		$('.various').addClass('fancybox.iframe');
+	} else {
+		$('.various').addClass('fancybox');
+	}
+
 	$('.fancybox').fancybox({
 		nextEffect: 'fade',
 		prevEffect: 'fade',
@@ -150,7 +149,12 @@ $(function(){
 		autoSize	: false,
 		closeClick	: false,
 		openEffect	: 'none',
-		closeEffect	: 'none'
+		closeEffect	: 'none',
+		helpers : {
+			title : {
+				type : 'inside'
+			}
+		},
 	});
 
 	$('input').each(function(){
