@@ -21,15 +21,4 @@ block content
 			+galleryAlbom('#', 'korney', 'gallery-albom-item--korney', 'rubric--korney', 'img/gallery-4.jpg', 'Корней и Елена Чуковские с кем-то и где-то')
 			+galleryAlbom('#', 'elena', 'gallery-albom-item--elena', 'rubric--elena', 'img/gallery-5.jpg', 'Елена Чуковская в каком-то саду')
 			+galleryAlbom('#', 'nikolay', 'gallery-albom-item--nikolay', 'rubric--nikolay', 'img/gallery-6.jpg', 'Корней и Елена Чуковские с кем-то и где-то')
-		ul.pagination
-				li.prev
-					a(href="")
-				li.active
-					a(href="") 1
-				li
-					a(href="") 2
-				li
-					a(href="") 3
-				li.next
-					a(href="")
-		a(href="").more-mobile Ещё
+		include incl-pagination.jade

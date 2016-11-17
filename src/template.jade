@@ -13,10 +13,8 @@ html(lang="ru")
 			header
 				.header-inner
 					.logo
-						//- Тут будет в итоге картинка стоять, должен прислать дизайнер
-						//- a(href="index.html")
-							//- img(src="img/logo.svg", alt="")
-						a(href="index.html") Chukfamily
+						a(href="index.html")
+							img(src="img/logo.svg", alt="")
 					nav.main-menu
 						.mobile-menu
 						.menu-block
@@ -60,11 +58,11 @@ html(lang="ru")
 										li
 											a(href="about.html") О проекте
 										li
-											a(href="") Связь
+											a(href="feedback.html") Связь
 										li
-											a(href="") Друзья сайта
+											a(href="friends.html") Друзья сайта
 										li
-											a(href="") Благодарности
+											a(href="thanks.html") Благодарности
 							.subscribe.subscribe--mobile
 								p Подписка
 								form(action="")
@@ -81,7 +79,8 @@ html(lang="ru")
 		footer 
 			.footer-inner
 				.logo
-					a(href="") Chukfamily
+					a(href="") 
+						img(src="img/logo.svg", alt="")
 					p &copy; 2016 Все права защищены
 				.footer-right
 					.soc-icons
@@ -93,4 +92,16 @@ html(lang="ru")
 						form(action="")
 							input(type="email" placeholder="Ваш e-mail")
 							button(type="submit" value="")
+		.hidden
+			#inline.audio-popup
+				h2 Горький и детская литература
+				.audio-info
+					p.source Независимая газета / 1964 год
+					p.audio-author Читает: Иван Иванов
+				audio(controls)
+					source(src="audio/julia.ogg" type="audio/ogg; codecs=vorbis")
+					source(src="http://www.chukfamily.ru/Sounds/julia.mp3")
+					| Тег audio не поддерживается вашим браузером. 
+					a(href="http://www.chukfamily.ru/Sounds/julia.mp3") Скачать
+
 	+scripts('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', 'js/device.min.js', 'js/jquery.fancybox.pack.js', 'js/jquery.mousewheel-3.0.6.pack.js', 'js/jquery.touchSwipe.js', 'js/slick.min.js', 'js/chukfamily.js')

@@ -71,13 +71,6 @@ $min-1600: "min-width: 1600px";
 	font-style: normal;
 }
 @font-face {
-	font-family: 'proximanova-extrabld';
-	src: url('../fonts/proximanova-extrabld.eot');
-	src: local('☺'), url('../fonts/proximanova-extrabld.woff') format('woff'), url('../fonts/proximanova-extrabld.ttf') format('truetype'), url('../fonts/proximanova-extrabld.svg') format('svg');
-	font-weight: 900;
-	font-style: normal;
-}
-@font-face {
 	font-family: 'cambria';
 	src: url('../fonts/cambria.eot');
 	src: local('☺'), url('../fonts/cambria.woff') format('woff'), url('../fonts/cambria.ttf') format('truetype'), url('../fonts/cambria.svg') format('svg');
@@ -133,9 +126,9 @@ body {
 	}
 }
 .main-content {
-	min-height: -webkit-calc(100vh - 127px);
-	min-height: -moz-calc(100vh - 127px);
-	min-height: calc(100vh - 127px);
+	min-height: -webkit-calc(100vh - 118px);
+	min-height: -moz-calc(100vh - 118px);
+	min-height: calc(100vh - 118px);
 }
 .wrapper {
 	margin: 0 auto;
@@ -179,7 +172,9 @@ input, button {
 em {
 	font-family: cambria italic;
 }
-
+.hidden {
+	display: none;
+}
 .header-inner {
 	margin: 0 auto;
 	box-sizing: border-box;
@@ -205,13 +200,7 @@ header {
 	background-color: #fff;
 }
 .logo {
-	a {
-		font-family: proximanova-extrabld;
-		text-decoration: none;
-		color: #000;
-		text-transform: uppercase;
-		font-size: 2em;
-	}
+	width: 250px;
 	p {
 		font-family: proximanova;
 		font-size: .7em;
@@ -1589,19 +1578,19 @@ h3 {
 // author-page
 .author-page-intro {
 	overflow: hidden;
-	margin-bottom: 2.7em;
 	padding-top: 10px;
 	img {
 		max-width: 100%;
 	}
 	&__text {
+		margin-bottom: 2.7em;
 		@media ($max-859) {
 			width: 100%;
 			margin-top: 1em;
 		}
 		@media ($min-860) {
 			width: 75%;
-			margin: 2em auto 0;
+			margin: 2em auto 2.7em;
 		}
 		.date {
 			color: $gray;
@@ -1615,18 +1604,23 @@ h3 {
 			}
 			@media ($min-600) {
 				float: left;
-				margin-top: -25px;
+				margin-top: -60px;
 			}
 		}
 		h2 {
 			text-align: center;
 			font-weight: 400;
+			margin-bottom: .5em;
 			@media ($max-599) {
 				font-size: 2em;
 			}
 			@media ($min-600) {
 				font-size: 2.8em;
 			}
+		}
+		p {
+			line-height: 1.3;
+			margin-bottom: 1em;
 		}
 	}
 }
@@ -1683,12 +1677,11 @@ h3 {
 	line-height: 1.4;
 	font-size: 1em;
 	overflow: hidden;
-	margin-top: 1.4em;
 	@media ($max-599) {
-		margin-bottom: 2.5em;
+		margin-bottom: 1.5em;
 	}
 	@media ($min-600) {
-		margin-bottom: 3em;
+		margin-bottom: 2em;
 	}
 	&__full {
 		display: none;
@@ -1922,11 +1915,15 @@ h3 {
 }
 
 .desktop {
-	.author-page__lnk {
-		&:hover {
-			a {
-				color: $scene;
-				text-decoration: none;
+	@each $family, $color in (korney, $korney), (lidia, $lidia), (elena, $elena), (nikolay, $nikolay), (scene, $scene) {
+		.author-page--#{$family} {
+			.author-page__lnk {
+				&:hover {
+					a {
+						color: #{$color};
+						text-decoration: none;
+					}
+				}
 			}
 		}
 	}
@@ -2413,6 +2410,7 @@ h3 {
 		text-transform: uppercase;
 		margin-right: 10px;
 		font-size: .7em;
+		line-height: 1;
 	}
 }
 .desktop {
@@ -2421,6 +2419,7 @@ h3 {
 		&:hover {
 			border-bottom-color: transparent;
 			@include transition(color);
+			text-decoration: none;
 		}
 	}
 }
@@ -2430,7 +2429,7 @@ h3 {
 	}
 }
 .desktop {
-	.audio-lnk {
+	.lnk-add .audio-lnk {
 		font-family: proximanova bold;
 		border-bottom: 2px solid $gray;
 		text-transform: uppercase;
@@ -2439,10 +2438,12 @@ h3 {
 		margin-bottom: 3px;
 		font-size: .7em;
 		line-height: 1;
-		@include transition(color);
+		// @include transition(color);
 		&:hover {
+			color: #000;
 			border-bottom-color: transparent;
 			@include transition(color);
+			text-decoration: none;
 		}
 	}
 }
@@ -2917,6 +2918,107 @@ h3 {
 		margin-bottom: 15px;
 		p {
 			margin-bottom: 10px;
+		}
+	}
+}
+
+.audio-popup {
+	text-align: center;
+	padding-top: 50px;
+	h2 {
+		font-family: Cambria;
+		font-size: 1.5em;
+		margin-bottom: 1em;
+	}
+	p {
+		font-size: .8em;
+		margin-bottom: .5em;
+		font-family: proximanova;
+	}
+}
+.audio-info {
+	margin-bottom: 1.5em;
+}
+
+
+// about.html
+.about-info {
+	margin: 0 auto 2em;
+	padding-top: 20px;
+	@media ($max-859) {
+		width: 96%;
+	}
+	@media ($min-860) {
+		width: 84%;
+	}
+	p {
+		line-height: 1.3;
+		margin-bottom: 1em;
+	}
+	h2 {
+		font-weight: 400;
+		margin-bottom: 1.2em;
+		@media ($max-599) {
+			font-size: 2em;
+			text-align: center;
+		}
+		@media ($min-600) {
+			font-size: 2.8em;
+			margin-left: 37%;
+		}
+	}
+	h4 {
+		margin: 0;
+		text-transform: uppercase;
+		font-family: proximanova bold;
+		font-size: 1.5em;
+		margin-bottom: 1em;
+		@media ($max-599) {
+			text-align: center;
+		}
+	}
+	&__item {
+		overflow: hidden;
+		margin-bottom: 2.5em;
+	}
+	&__img {
+		@media ($max-599) {
+			width: 180px;
+			margin: 0 auto 1em;
+			text-align: center;
+		}
+		@media ($min-600) {
+			float: left;
+			width: 27%;
+		}
+		img {
+			max-width: 100%;
+			border-radius: 50%;
+		}
+	}
+	&__txt {
+		@media ($min-600) {
+			margin-left: 37%;
+		}
+	}
+	.more {
+		&:after {
+			-ms-transform: rotate(90deg);
+			-webkit-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+	}
+	.open {
+		.more {
+			color: #9b9b9b;
+			border-bottom: 0;
+			&:after {
+				background: url(../img/next-gray.svg) 0 0 no-repeat;
+				background-size: 9px 28px;
+				-ms-transform: rotate(-90deg);
+				-webkit-transform: rotate(-90deg);
+				transform: rotate(-90deg);
+			}
 		}
 	}
 }

@@ -56,7 +56,7 @@ $(function(){
 	});
 
 	// show all links if click all material
-	$(".js-open").click(function (){
+	$('.js-open').on('click', function(){
 		if( $(this).parent().hasClass('open') ) { // если есть класс open
 			$(this).parent().find(".author-page__info p:not(:lt("+sceneLnk+"))").hide(); // все открытые ссылки закрываем
 			$(this).html(shownews); // меняем обратно надпись в исходное положение
@@ -66,6 +66,19 @@ $(function(){
 			$(this).parent().find(".author-page__info p:not(:lt("+sceneLnk+"))").show(); // находим все ссылки у этого блока и открываем
 			$(this).html(hidenews); // подменяем ссылку по которой кликнули
 			$(this).parent().addClass('open'); // родителю присваиваем класс open
+		}
+	});
+
+	// about show more information
+	$('.about-info__item').each(function(){
+		$(this).find('p').not(':first').hide();
+	});
+	$('.js-open').on('click', function(){
+		var $about = $(this).parent();
+		if( $about.hasClass('open') ) { // если есть класс open
+			$about.find('p').show();
+		} else {
+			$about.find('p').not(':first').hide();
 		}
 	});
 
@@ -145,6 +158,23 @@ $(function(){
 		maxHeight	: 600,
 		fitToView	: false,
 		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none',
+		helpers : {
+			title : {
+				type : 'inside'
+			}
+		},
+	});
+
+	$(".js-various").fancybox({
+		// maxWidth	: 800,
+		maxHeight	: 300,
+		fitToView	: false,
+		width		: '100%',
 		height		: '70%',
 		autoSize	: false,
 		closeClick	: false,

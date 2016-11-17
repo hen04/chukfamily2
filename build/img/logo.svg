@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="191px" height="22px" viewBox="0 0 191 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
-    <title>C5DF84EE-4696-4AC7-B2FE-1C28CE2F1E82</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Artboards" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-weight="bold" font-family="ProximaNova-Bold, Proxima Nova" line-spacing="18" font-size="31">
-        <g id="7_наведение" transform="translate(-1140.000000, -542.000000)" fill="#000000">
-            <text id="CHUKFAMILY-Copy">
-                <tspan x="1139" y="573.688">CHUKFAMILY</tspan>
-            </text>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 194 24" enable-background="new 0 0 194 24" xml:space="preserve">
+<g>
+	<path d="M1,11.9C1,5.6,5.8,1.2,12,1.2c4.6,0,7.2,2.5,8.7,5.1l-3.8,1.9c-0.9-1.7-2.7-3-4.9-3c-3.8,0-6.5,2.9-6.5,6.8
+		c0,3.9,2.7,6.8,6.5,6.8c2.1,0,4-1.3,4.9-3l3.8,1.8c-1.5,2.6-4.1,5.1-8.7,5.1C5.8,22.6,1,18.3,1,11.9z"/>
+	<path d="M37.7,22.3v-8.7h-9.8v8.7h-4.4V1.6h4.4v8.1h9.8V1.6h4.4v20.7H37.7z"/>
+	<path d="M46.4,14V1.6h4.5v12.3c0,2.9,1.7,4.9,4.9,4.9c3.2,0,4.8-2,4.8-4.9V1.6h4.5V14c0,5.1-3,8.7-9.3,8.7
+		C49.4,22.6,46.4,19.1,46.4,14z"/>
+	<path d="M81.7,22.3L75.4,14l-1.6,1.9v6.4h-4.4V1.6h4.4v9.2l7.3-9.2h5.4l-8.2,9.7l8.8,11H81.7z"/>
+	<path d="M89.3,22.3V1.6H104v3.9H93.7v4.4h10v3.9h-10v8.6H89.3z"/>
+	<path d="M120.2,22.3l-1.3-3.5h-8.9l-1.3,3.5h-5l8-20.7h5.5l8,20.7H120.2z M114.5,6l-3.2,8.9h6.4L114.5,6z"/>
+	<path d="M145.4,22.3V7.8l-5.8,14.5h-1.9l-5.8-14.5v14.5h-4.4V1.6h6.2l5,12.5l5-12.5h6.2v20.7H145.4z"/>
+	<path d="M154.2,22.3V1.6h4.4v20.7H154.2z"/>
+	<path d="M162.9,22.3V1.6h4.4v16.8h8.7v3.9H162.9z"/>
+	<path d="M181.2,22.3v-8.5l-8-12.2h5l5.1,8.3l5.1-8.3h5l-7.9,12.2v8.5H181.2z"/>
+</g>
 </svg>
