@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/slick.css"/>
     <link rel="stylesheet" href="css/jquery.fancybox.css"/>
+    <link rel="stylesheet" href="css/jquery.arcticmodal.css"/>
     <link rel="stylesheet" href="css/chukfamily.css"/>
   </head>
   <body>
@@ -73,10 +74,36 @@
       </header>
       <main>
         <div class="wrapper"> 
-          <div class="author-page-intro">
-            <div class="author-page-intro__text">
-              <h2>Связь</h2>
-              <p>Если вы хотите связаться с редакцией, пишите нам, используя эту форму:</p>
+          <div class="feedback">
+            <h2>Связь</h2>
+            <div class="feedback__center">
+              <div class="feedback__text">
+                <p>Если вы хотите связаться с редакцией, пишите нам, используя эту форму:</p>
+                <div class="success">
+                  <p>Ваше сообщение благополучно отправлено. Спасибо за сообщение.</p>
+                </div>
+              </div>
+              <div class="feedback__form">
+                <form action="">
+                  <div class="feedback__row">
+                    <div class="feedback-item">
+                      <label for="name">* Имя</label>
+                      <input type="text" name="name" id="name" class="form-item form-item--name">
+                    </div>
+                    <div class="feedback-item">
+                      <label for="email">* E-mail</label>
+                      <input type="email" name="email" id="email" class="form-item form-item--email">
+                    </div>
+                  </div>
+                  <label for="thema">* Тема</label>
+                  <input type="text" name="theme" id="theme" placeholder="Заполните, пожалуйста, это поле" class="error form-item form-item--theme">
+                  <label for="message">* Сообщение</label>
+                  <textarea name="" id="message" class="form-item form-item--message"></textarea><span>* Поля, обязательные для сообщения</span>
+                  <div class="feedback-send">
+                    <input type="submit" value="Отправить">
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -119,5 +146,6 @@
   <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
   <script src="js/jquery.touchSwipe.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/jquery.arcticmodal.js"></script>
   <script src="js/chukfamily.js"></script>
 </html>

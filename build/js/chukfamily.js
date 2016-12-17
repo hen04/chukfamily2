@@ -126,6 +126,19 @@ $(function(){
 		]
 	});
 
+	$('.material-slider').slick({
+		infinite: true,
+		appendArrows: $(".slick-arrows-material"),
+		prevArrow: '<div class="slick-prev"></div>',
+		nextArrow: '<div class="slick-next"></div>',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true
+	});
+
+
+
+
 	if( $('html').hasClass('desktop') ) {
 		$('.various').addClass('fancybox.iframe');
 	} else {
@@ -153,12 +166,12 @@ $(function(){
 		}
 	});
 
-	$(".various").fancybox({
-		maxWidth	: 800,
+	$(".various, .various-video").fancybox({
+		maxWidth	: 776,
 		maxHeight	: 600,
 		fitToView	: false,
-		width		: '70%',
-		height		: '70%',
+		width		: '100%',
+		height		: '100%',
 		autoSize	: false,
 		closeClick	: false,
 		openEffect	: 'none',
@@ -250,6 +263,8 @@ $(function(){
 		}
 	});
 
-
+	$('.js-modal').on('click', function(){
+		$('.box-modal').arcticmodal();
+	})
 
 });
