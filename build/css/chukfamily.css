@@ -204,7 +204,7 @@ header {
   padding-top: 1em; }
   @media (min-width: 860px) {
     .main-menu {
-      width: 62.5%;
+      width: 63%;
       box-sizing: border-box; } }
 
 .menu-block {
@@ -2030,9 +2030,7 @@ h3 .number {
       text-align: center; }
 
 .proza-books {
-  margin-bottom: 4em; }
-  .proza-books h2 {
-    margin-bottom: 1em; }
+  margin-bottom: 3em; }
 
 .breadcrumbs {
   display: -webkit-flex;
